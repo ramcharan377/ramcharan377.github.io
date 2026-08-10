@@ -5,22 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Athyam Ramcharan — Professional Portfolio. AI & Robotics Engineering student at Dayananda Sagar University, Bangalore."
+      content="Athyam Ramcharan — Personal Homepage. AI & Robotics Engineering student at Dayananda Sagar University, Bangalore."
     />
     <meta name="author" content="Athyam Ramcharan" />
 
-    <!-- Open Graph for sharing -->
-    <meta property="og:title" content="Athyam Ramcharan | AI & Robotics Portfolio" />
-    <meta property="og:description" content="Academic portfolio showcasing research in Geometric KD, autonomous systems, and reinforcement learning." />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Athyam Ramcharan" />
+    <meta property="og:description" content="AI & Robotics Engineering student. Research in Geometric KD and reinforcement learning." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ramcharan377.github.io" />
 
-    <title>Athyam Ramcharan | AI & Robotics Portfolio</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <title>Athyam Ramcharan</title>
 
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -34,510 +29,206 @@
       </div>
     </div>
 
-    <!-- ─── Header & Navigation ─── -->
-    <header class="header">
-      <div class="container">
-        <a href="#home" class="logo">Athyam Ramcharan</a>
+    <main class="page-container">
+      <!-- Title Header -->
+      <header class="page-header">
+        <h1 class="name-title">Athyam Ramcharan</h1>
+        <p class="tagline">AI &amp; Robotics Engineering Student at Dayananda Sagar University, Bangalore</p>
         
-        <nav class="nav-menu" id="nav-menu">
-          <a href="#about" class="nav-link">About</a>
-          <a href="#research" class="nav-link">Research</a>
-          <a href="#projects" class="nav-link">Projects</a>
-          <a href="#experiments" class="nav-link">Experiments</a>
-          <a href="#education" class="nav-link">Education</a>
-          <a href="#contact" class="nav-link">Contact</a>
-        </nav>
-
-        <div class="controls">
-          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+        <div class="contact-links">
+          <a href="mailto:ramcharanathyam2006@gmail.com">Email</a> &middot;
+          <a href="https://github.com/ramcharan377" target="_blank" rel="noreferrer">GitHub</a> &middot;
+          <a href="https://linkedin.com/in/athyam-ramcharan" target="_blank" rel="noreferrer">LinkedIn</a> &middot;
+          <a href="./ramcharan_resume_updated.pdf" target="_blank" rel="noreferrer">Resume/CV [PDF]</a>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <!-- ─── Hero Section ─── -->
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-layout">
-          <div class="hero-text">
-            <h1>Athyam Ramcharan</h1>
-            <p class="hero-subtitle">AI & Robotics Engineering Student</p>
-            <p class="hero-desc">
-              Pursuing a B.Tech at Dayananda Sagar University, Bangalore. Focus areas include autonomous robotic navigation, reinforcement learning control tasks, transformer architectures, and embedded edge deployment.
-            </p>
-            <div class="hero-buttons">
-              <a href="./ramcharan_resume_updated.pdf" class="btn btn-primary" target="_blank" rel="noreferrer">
-                Download CV
-              </a>
-              <a href="https://github.com/ramcharan377" class="btn btn-secondary" target="_blank" rel="noreferrer">
-                GitHub Profile
-              </a>
-            </div>
-          </div>
+      <hr />
 
-          <div class="hero-highlights">
-            <div class="highlight-card">
-              <h3>Robotics & Autonomy</h3>
-              <p>ROS 2 nodes, Gazebo physical simulations, SLAM mapping pipelines, and Nav2 multi-waypoint path planning.</p>
-            </div>
-            <div class="highlight-card">
-              <h3>Machine Learning</h3>
-              <p>Custom reinforcement learning architectures, transformer attention algorithms, and parameter-efficient language model tuning.</p>
-            </div>
-            <div class="highlight-card">
-              <h3>Embedded Systems</h3>
-              <p>Edge controller bring-up on Raspberry Pi, FPGA register verification, and real-time execution bounds.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <!-- Bio / About -->
+      <section class="section" id="about">
+        <p>
+          I am an Artificial Intelligence and Robotics Engineering student based in Bangalore, India. My engineering work is focused on autonomous system control, SLAM navigation, reinforcement learning algorithms, and deep learning compilation constraints on edge hardware.
+        </p>
+        <p>
+          Previously, I earned a Diploma in Mechanical Engineering from Sir M Visvesvaraya Polytechnic, which gave me practical training in structural mechanics and mechanical assembly. My goal is to build physical systems that combine mechanical precision with intelligent learning models.
+        </p>
+      </section>
 
-    <!-- ─── About Section ─── -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">About</span>
-          <h2 class="section-title">Background & Focus</h2>
-          <p class="section-desc">Integrating mechanical design principles with artificial intelligence models to build stable, autonomous agents.</p>
-        </div>
+      <hr />
 
-        <div class="about-content">
-          <p>
-            My engineering work started with a Diploma in Mechanical Engineering, which provided a practical baseline in dynamics, mechanics, and physical assembly. Seeking to connect physical hardware with intelligence, I transitioned to a B.Tech in Artificial Intelligence & Robotics at DSU Bangalore.
+      <!-- Research proposal -->
+      <section class="section" id="research">
+        <h2>Academic Research &amp; Proposals</h2>
+        <div class="research-entry">
+          <h3 class="entry-title">Geometric Knowledge Distillation for Edge Robotics</h3>
+          <p class="entry-desc">
+            Deep learning models often exceed the runtime memory and compute capacity of lightweight robotic platforms. Standard knowledge distillation (KD) techniques map logit outputs from a teacher model to a student network but ignore the latent geometric manifold structure learned by intermediate representations. 
           </p>
-          <p>
-            Currently, I am looking at model compression workflows, primarily Geometric Knowledge Distillation, to optimize complex deep learning networks for hardware deployments where memory constraints and processing budgets are limited.
+          <p class="entry-desc">
+            My proposal introduces distance-preserving manifold alignment and topological mapping constraints into the distillation training pipeline. This ensures student networks maintain the structural topology of the teacher's latent space, enabling significant model compression while preserving navigation and control accuracy on edge devices like Raspberry Pi controllers.
           </p>
-          <div class="tags" style="margin-top: 24px;">
-            <span class="tag">ROS 2</span>
-            <span class="tag">PyTorch</span>
-            <span class="tag">Reinforcement Learning</span>
-            <span class="tag">LLM Engineering</span>
-            <span class="tag">Computer Vision</span>
-            <span class="tag">Edge AI</span>
-            <span class="tag">Gazebo</span>
+          <div class="entry-links">
+            <a href="./geometric_kd_plan.pdf" target="_blank" rel="noreferrer">Download Research Proposal [PDF]</a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ─── Research Section ─── -->
-    <section class="section" id="research">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Research proposal</span>
-          <h2 class="section-title">Geometric Knowledge Distillation</h2>
-          <p class="section-desc">Methods for neural network compression targetting robotic hardware at the edge.</p>
-        </div>
+      <hr />
 
-        <div class="research-container">
-          <h3 class="research-title">Geometric Representation Transfer Plan</h3>
-          <div class="research-meta">Dayananda Sagar University · Bangalore, India</div>
-          <div class="research-text">
-            <p>
-              Standard knowledge distillation transfers classification probabilities from a large neural network (the teacher) to a smaller network (the student). While this compresses the model size, it fails to capture the rich geometric relationships and manifold structures present in the teacher's latent representation layers.
-            </p>
-            <p>
-              My research proposal focuses on <strong>Geometric Knowledge Distillation</strong>. By introducing distance-preservation constraints, manifold structure alignment, and topological mapping parameters, the training pipeline ensures the student network preserves the structural relationships between representations. This compression approach is designed for edge robotic controllers (e.g., Raspberry Pi systems and UAV microcomputers) where low latency and limited memory are critical.
-            </p>
-          </div>
-          <div class="research-tags" style="margin-bottom: 24px;">
-            <span class="tag">Knowledge Distillation</span>
-            <span class="tag">Model Compression</span>
-            <span class="tag">Manifold Alignment</span>
-            <span class="tag">Edge Deployment</span>
-          </div>
-          <a href="./geometric_kd_plan.pdf" class="btn btn-primary" target="_blank" rel="noreferrer">
-            Read PDF Research Proposal
-          </a>
-        </div>
-      </div>
-    </section>
+      <!-- Projects -->
+      <section class="section" id="projects">
+        <h2>Engineering Projects</h2>
+        
+        <ul class="simple-list">
+          <li>
+            <strong>Autonomous Agricultural Drone</strong>: 
+            A multi-node quadcopter simulation in Gazebo environment utilizing ROS 2. Includes nodes for sensor fusion, LIDAR depth maps, SLAM mapping, and Nav2 waypoint trajectory execution for field coverage.
+            [<a href="https://github.com/ramcharan377" target="_blank" rel="noreferrer">Code</a>]
+          </li>
+          <li>
+            <strong>Quantum-Enhanced Machine Learning</strong>: 
+            A hybrid classical-quantum classification pipeline for disease detection. Developed quantum variational classifiers using PennyLane and Qiskit, comparing accuracy metrics directly against classical support vector machines and random forests.
+            [<a href="https://github.com/ramcharan377" target="_blank" rel="noreferrer">Code</a>]
+          </li>
+          <li>
+            <strong>Low-Resource LLMs for Indian Languages</strong>: 
+            PEFT configurations targeting localized Indian languages. Created fine-tuning workflows utilizing Hugging Face Transformers, LoRA, and QLoRA adapter layers to run on memory-constrained local GPUs.
+            [<a href="https://github.com/ramcharan377" target="_blank" rel="noreferrer">Code</a>]
+          </li>
+        </ul>
+      </section>
 
-    <!-- ─── Projects Section ─── -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Selected Projects</span>
-          <h2 class="section-title">Robotics & Machine Learning Systems</h2>
-          <p class="section-desc">Software stacks and models developed for physical simulation and deep learning tasks.</p>
-        </div>
+      <hr />
 
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <div class="project-card">
-            <h3>Autonomous Agricultural Drone</h3>
-            <p>Developed an autonomous quadcopter simulation in Gazebo environment utilizing ROS 2. Built nodes for sensor fusion, LIDAR depth maps, SLAM Toolbox mapping, and Nav2 waypoint navigation for field coverage tasks.</p>
-            <div class="tags">
-              <span class="tag">ROS 2</span>
-              <span class="tag">Gazebo</span>
-              <span class="tag">Nav2</span>
-              <span class="tag">SLAM</span>
+      <!-- Reinforcement Learning Experiments -->
+      <section class="section" id="rl-experiments">
+        <h2>Reinforcement Learning Experiments</h2>
+        <p class="sub-intro">Trained agents across classic control, Atari, and Box2D environments using Gymnasium, PyTorch, and Stable-Baselines3. Click gameplay figures to expand.</p>
+
+        <div class="rl-grid">
+          
+          <!-- Env 4 -->
+          <div class="rl-item">
+            <div class="rl-media-box">
+              <img class="rl-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/frozenlake_qlearning_greedy.gif" alt="FrozenLake Q-Learning Agent" />
             </div>
-            <a href="https://github.com/ramcharan377" class="project-link-btn" target="_blank" rel="noreferrer">
-              View Code Repository &rarr;
-            </a>
+            <div class="rl-info-box">
+              <h4>FrozenLake-v1 (Slippery)</h4>
+              <p class="rl-meta">Algorithm: Tabular Q-Learning | Hyperparameters: α=0.8, γ=0.95, ε=1.0 to 0.01 decay</p>
+              <p class="rl-results"><strong>Results:</strong> Model successfully learns the optimal hazard-avoiding path, accounting for transition direction probability offsets caused by slippery surfaces.</p>
+            </div>
           </div>
 
-          <!-- Project 2 -->
-          <div class="project-card">
-            <h3>Quantum-Enhanced ML</h3>
-            <p>Developed a hybrid classical-quantum machine learning classifier for disease detection. Programmed quantum variational classifiers using PennyLane and Qiskit APIs, comparing performance directly against standard classical models.</p>
-            <div class="tags">
-              <span class="tag">Qiskit</span>
-              <span class="tag">PennyLane</span>
-              <span class="tag">Scikit-learn</span>
-              <span class="tag">Python</span>
+          <!-- Env 5 -->
+          <div class="rl-item">
+            <div class="rl-media-box">
+              <img class="rl-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/taxi_qlearning_greedy.gif" alt="Taxi pick-up Q-Learning Agent" />
             </div>
-            <a href="https://github.com/ramcharan377" class="project-link-btn" target="_blank" rel="noreferrer">
-              View Code Repository &rarr;
-            </a>
+            <div class="rl-info-box">
+              <h4>Taxi-v4 passenger transit</h4>
+              <p class="rl-meta">Algorithm: SARSA vs Tabular Q-Learning | Hyperparameters: 2000 episodes, α=0.4, ε=0.1 constant</p>
+              <p class="rl-results"><strong>Results:</strong> Both algorithms successfully converged to the optimal policy (+8 reward). Tabular Q-Learning achieved stable convergence ~15% faster than SARSA.</p>
+            </div>
           </div>
 
-          <!-- Project 3 -->
-          <div class="project-card">
-            <h3>Low-Resource LLMs for Indian Languages</h3>
-            <p>Researched parameter-efficient fine-tuning (PEFT) configurations for low-resource Indian languages. Created fine-tuning notebooks utilizing Hugging Face Transformers, LoRA, and QLoRA on local GPUs.</p>
-            <div class="tags">
-              <span class="tag">HuggingFace</span>
-              <span class="tag">LoRA</span>
-              <span class="tag">NLP</span>
-              <span class="tag">Adapters</span>
+          <!-- Env 6 -->
+          <div class="rl-item">
+            <div class="rl-media-box">
+              <img class="rl-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/lunarlander_reinforce.gif" alt="LunarLander Landing Agent" />
             </div>
-            <a href="https://github.com/ramcharan377" class="project-link-btn" target="_blank" rel="noreferrer">
-              View Code Repository &rarr;
-            </a>
+            <div class="rl-info-box">
+              <h4>LunarLander-v2 Lander</h4>
+              <p class="rl-meta">Algorithm: REINFORCE with Baseline | Hyperparameters: γ=0.99, LR=1e-3, baseline value network</p>
+              <p class="rl-results"><strong>Results:</strong> Converged to an average reward exceeding +200 over 100 consecutive episodes, meeting Gymnasium's environment solving criteria.</p>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ─── Experiments Section ─── -->
-    <section class="section" id="experiments">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Experiments & Results</span>
-          <h2 class="section-title">Algorithms & Models Logs</h2>
-          <p class="section-desc">Documented parameters, code structures, and convergence results from my repositories. Click images to expand.</p>
-        </div>
-
-        <div class="tabs-container">
-          <button class="tab-btn active" data-tab="rl-panel">Reinforcement Learning (9 Environments)</button>
-          <button class="tab-btn" data-tab="nlp-panel">Transformer & LLM Engineering (4 Notebooks)</button>
-        </div>
-
-        <!-- Tab Panel 1: Reinforcement Learning -->
-        <div class="tab-panel active" id="rl-panel">
-          <div class="rl-experiments-list">
-            
-            <!-- RL 04 -->
-            <div class="rl-card">
-              <div class="rl-gif-wrapper">
-                <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/frozenlake_qlearning_greedy.gif" alt="FrozenLake Q-Learning Agent Gameplay" />
-              </div>
-              <div class="rl-content">
-                <div class="rl-header">
-                  <h3>FrozenLake-v1 (Slippery Environment)</h3>
-                  <span class="rl-algo-badge">Tabular Q-Learning</span>
-                </div>
-                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 12px;">
-                  Grid-world navigation task where the agent must find a path to the goal while walking on slippery ice patches that cause stochastic transition directions.
-                </p>
-                <div class="rl-details">
-                  <div class="rl-detail-item">
-                    <div class="rl-detail-label">Hyperparameters</div>
-                    <div class="rl-detail-value">
-                      Learning rate α: 0.8<br />
-                      Discount factor γ: 0.95<br />
-                      Epsilon ε: 1.0 to 0.01 decay
-                    </div>
-                  </div>
-                  <div class="rl-detail-item">
-                    <div class="rl-detail-label">Results & Convergence</div>
-                    <div class="rl-detail-value">
-                      Model successfully learns the optimal path, factoring in probability weights of adjacent states to avoid water hazards.
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <!-- Env 7 -->
+          <div class="rl-item">
+            <div class="rl-media-box">
+              <img class="rl-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/breakout_dqn.gif" alt="Atari Breakout DQN Agent" />
             </div>
-
-            <!-- RL 05 -->
-            <div class="rl-card">
-              <div class="rl-gif-wrapper">
-                <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/taxi_qlearning_greedy.gif" alt="Taxi Passenger pick-up Agent Gameplay" />
-              </div>
-              <div class="rl-content">
-                <div class="rl-header">
-                  <h3>Taxi-v4 Environment</h3>
-                  <span class="rl-algo-badge">SARSA vs Q-Learning</span>
-                </div>
-                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 12px;">
-                  Grid-world navigation task requiring passenger pickup from a random start node and dropoff at designated colored coordinates.
-                </p>
-                <div class="rl-details">
-                  <div class="rl-detail-item">
-                    <div class="rl-detail-label">Hyperparameters</div>
-                    <div class="rl-detail-value">
-                      Episode Budget: 2000<br />
-                      Epsilon ε: 0.1 constant<br />
-                      Learning rate α: 0.4
-                    </div>
-                  </div>
-                  <div class="rl-detail-item">
-                    <div class="rl-detail-label">Results & Convergence</div>
-                    <div class="rl-detail-value">
-                      Both algorithms converged from -700 penalty to +8 reward. Q-Learning converged ~15% faster than SARSA.
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="rl-info-box">
+              <h4>Atari Breakout-v4</h4>
+              <p class="rl-meta">Algorithm: Deep Q-Network (DQN) | Hyperparameters: Frame stack=4, Buffer=10^5, Target update=1000 steps</p>
+              <p class="rl-results"><strong>Results:</strong> Agent learns to tunnel through the corners of the brick wall to trap the ball behind the bricks and maximize score velocity.</p>
             </div>
-
-            <!-- RL 06 -->
-            <div class="rl-card">
-              <div class="rl-gif-wrapper">
-                <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/lunarlander_reinforce.gif" alt="LunarLander Landing Agent Gameplay" />
-              </div>
-              <div class="rl-content">
-                <div class="rl-header">
-                  <h3>LunarLander-v2 Physics</h3>
-                  <span class="rl-algo-badge">REINFORCE with Baseline</span>
-                </div>
-                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 12px;">
-                  Module landing task requiring engine thrust and steering control to descend safely between target flags.
-                </p>
-                <div class="rl-details">
-                  <div class="rl-detail-item">
-                    <div class="rl-detail-label">Hyperparameters</div>
-                    <div class="rl-detail-value">
-                      Discount factor γ: 0.99<br />
-                      Adam Optimizer LR: 1e-3<br />
-                      Baseline network implementation
-                    </div>
-                  </div>
-                  <div class="rl-detail-item">
-                    <div class="rl-detail-label">Results & Convergence</div>
-                    <div class="rl-detail-value">
-                      Achieved +200 average reward over 100 consecutive episodes, meeting Gymnasium's criteria for a successful landing.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- RL 07 -->
-            <div class="rl-card">
-              <div class="rl-gif-wrapper">
-                <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/breakout_dqn.gif" alt="Atari Breakout DQN Agent Gameplay" />
-              </div>
-              <div class="rl-content">
-                <div class="rl-header">
-                  <h3>Atari Breakout-v4</h3>
-                  <span class="rl-algo-badge">Deep Q-Network (DQN)</span>
-                </div>
-                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 12px;">
-                  High-dimensional pixel-level control. Network processes stacked frames of visual inputs to output discrete paddle movement actions.
-                </p>
-                <div class="rl-details">
-                  <div class="rl-detail-item">
-                    <div class="rl-detail-label">Hyperparameters</div>
-                    <div class="rl-detail-value">
-                      Frame Stack: 4 frames<br />
-                      Replay Buffer size: 100,000<br />
-                      Target update frequency: 1000 steps
-                    </div>
-                  </div>
-                  <div class="rl-detail-item">
-                    <div class="rl-detail-label">Results & Convergence</div>
-                    <div class="rl-detail-value">
-                      Agent successfully learns block-clearing behaviors, including targeting corners to trap the ball behind the bricks.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- RL 09 -->
-            <div class="rl-card">
-              <div class="rl-gif-wrapper">
-                <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/actorcritic_walker.gif" alt="BipedalWalker Walking Agent Gameplay" />
-              </div>
-              <div class="rl-content">
-                <div class="rl-header">
-                  <h3>BipedalWalker-v3</h3>
-                  <span class="rl-algo-badge">Advantage Actor-Critic (A2C)</span>
-                </div>
-                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 12px;">
-                  Non-linear continuous action control task. Agent must coordinate joint torque outputs to walk across irregular terrain.
-                </p>
-                <div class="rl-details">
-                  <div class="rl-detail-item">
-                    <div class="rl-detail-label">Hyperparameters</div>
-                    <div class="rl-detail-value">
-                      Continuous action space [-1, 1]<br />
-                      Entropy coefficient: 0.01<br />
-                      Gamma γ: 0.99
-                    </div>
-                  </div>
-                  <div class="rl-detail-item">
-                    <div class="rl-detail-label">Results & Convergence</div>
-                    <div class="rl-detail-value">
-                      Agent learned stable locomotion gaits and balanced correctly over steps without leg buckling.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- RL 08 -->
-            <div class="rl-card">
-              <div class="rl-gif-wrapper">
-                <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/bandit_ad_selection.gif" alt="Multi-Armed Bandit Selection Simulation" />
-              </div>
-              <div class="rl-content">
-                <div class="rl-header">
-                  <h3>Multi-Armed Bandit</h3>
-                  <span class="rl-algo-badge">Epsilon-Greedy vs UCB</span>
-                </div>
-                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 12px;">
-                  Simulating ad selection CTR parameters to evaluate exploration-exploitation trade-offs under reward probabilities.
-                </p>
-                <div class="rl-details">
-                  <div class="rl-detail-item">
-                    <div class="rl-detail-label">Hyperparameters</div>
-                    <div class="rl-detail-value">
-                      Arms: 10<br />
-                      UCB parameter c: 2.0<br />
-                      Steps: 10,000 iterations
-                    </div>
-                  </div>
-                  <div class="rl-detail-item">
-                    <div class="rl-detail-label">Results & Convergence</div>
-                    <div class="rl-detail-value">
-                      Upper Confidence Bound (UCB) converged with lower cumulative regret compared to the Epsilon-Greedy baseline.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- RL 01-03 Grid (Random exploration benchmarks) -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 16px;">
-              <div class="rl-card" style="grid-template-columns: 1fr;">
-                <div class="rl-gif-wrapper" style="height: 140px;">
-                  <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/cartpole_random_agent.gif" alt="CartPole Physics Environment" />
-                </div>
-                <div class="rl-content" style="padding: 16px;">
-                  <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 6px;">01. CartPole-v1 Benchmark</h4>
-                  <p style="font-size: 0.8rem; color: var(--text-secondary);">Random agent implementation used to measure baseline physics simulator step overhead.</p>
-                </div>
-              </div>
-              <div class="rl-card" style="grid-template-columns: 1fr;">
-                <div class="rl-gif-wrapper" style="height: 140px;">
-                  <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/mountaincar_random_agent.gif" alt="MountainCar Physics Environment" />
-                </div>
-                <div class="rl-content" style="padding: 16px;">
-                  <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 6px;">02. MountainCar-v0 Benchmark</h4>
-                  <p style="font-size: 0.8rem; color: var(--text-secondary);">Exploring boundary dimensions and gravity metrics with a random policy execution.</p>
-                </div>
-              </div>
-              <div class="rl-card" style="grid-template-columns: 1fr;">
-                <div class="rl-gif-wrapper" style="height: 140px;">
-                  <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/acrobot_random_agent.gif" alt="Acrobot Physics Environment" />
-                </div>
-                <div class="rl-content" style="padding: 16px;">
-                  <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 6px;">03. Acrobot-v1 Benchmark</h4>
-                  <p style="font-size: 0.8rem; color: var(--text-secondary);">Double-joint pendulum baseline evaluating passive torque gravity boundaries.</p>
-                </div>
-              </div>
-            </div>
-
           </div>
+
+          <!-- Env 9 -->
+          <div class="rl-item">
+            <div class="rl-media-box">
+              <img class="rl-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/actorcritic_walker.gif" alt="BipedalWalker Walking Agent" />
+            </div>
+            <div class="rl-info-box">
+              <h4>BipedalWalker-v3</h4>
+              <p class="rl-meta">Algorithm: Advantage Actor-Critic (A2C) | Hyperparameters: Action space [-1, 1], Entropy weight=0.01, γ=0.99</p>
+              <p class="rl-results"><strong>Results:</strong> Learned continuous joint torque balancing coordinates to traverse irregular steps without leg buckling.</p>
+            </div>
+          </div>
+
+          <!-- Env 8 -->
+          <div class="rl-item">
+            <div class="rl-media-box">
+              <img class="rl-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/bandit_ad_selection.gif" alt="Multi-Armed Bandit Agent" />
+            </div>
+            <div class="rl-info-box">
+              <h4>Multi-Armed Bandit</h4>
+              <p class="rl-meta">Algorithm: Epsilon-Greedy vs Upper Confidence Bound (UCB) | Hyperparameters: 10 arms, UCB parameter c=2.0</p>
+              <p class="rl-results"><strong>Results:</strong> UCB successfully balanced the exploration-exploitation threshold, minimizing cumulative regret over 10,000 steps.</p>
+            </div>
+          </div>
+
+          <!-- Env 1-3 (Classic control baselines) -->
+          <div class="rl-item flex-row-mobile">
+            <div style="display: flex; gap: 16px; width: 100%; flex-wrap: wrap;">
+              <div class="rl-sub-box">
+                <img class="rl-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/cartpole_random_agent.gif" alt="CartPole random agent" />
+                <div class="rl-sub-text"><strong>01. CartPole-v1</strong>: Random agent physics baseline.</div>
+              </div>
+              <div class="rl-sub-box">
+                <img class="rl-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/mountaincar_random_agent.gif" alt="MountainCar random agent" />
+                <div class="rl-sub-text"><strong>02. MountainCar-v0</strong>: Gravity exploration baseline.</div>
+              </div>
+              <div class="rl-sub-box">
+                <img class="rl-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/acrobot_random_agent.gif" alt="Acrobot random agent" />
+                <div class="rl-sub-text"><strong>03. Acrobot-v1</strong>: Joint torque space benchmark.</div>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </section>
 
-        <!-- Tab Panel 2: NLP / Transformers -->
-        <div class="tab-panel" id="nlp-panel">
-          <div class="nlp-experiments-grid">
-            
-            <!-- NLP 01 -->
-            <div class="nlp-card">
-              <h3>01_gpt2_text_generation.ipynb <a href="https://github.com/ramcharan377/transformer-text-generation-lab" target="_blank" rel="noreferrer" style="font-size: 0.8rem;">View Notebook &rarr;</a></h3>
-              <p class="nlp-card-desc">Inference pipeline benchmarks on GPT-2 pre-trained parameters via Hugging Face pipelines.</p>
-              
-              <div class="nlp-grid-details">
-                <div class="nlp-detail-section">
-                  <h4>Mechanism</h4>
-                  <p>Inits tokenization and forward-pass calculations using fixed seed parameters to achieve reproducible probability outputs.</p>
-                </div>
-                <div class="nlp-detail-section">
-                  <h4>Key Parameters</h4>
-                  <p>
-                    <code>max_length = 50</code><br />
-                    <code>num_return_sequences = 3</code><br />
-                    <code>set_seed(42)</code>
-                  </p>
-                </div>
-              </div>
+      <hr />
 
-              <div>
-                <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Sample Prompt & Output</h4>
-                <div class="nlp-code-sample"><strong>Input:</strong> "In a shocking turn of events, a herd of unicorns has been discovered living..."
-<strong>Output:</strong> "...in a remote, previously unexplored valley, in the Andes Mountains. Even more surprising to the researchers was the fact that the unicorns spoke fairly perfect, accented English..."</div>
-              </div>
-            </div>
+      <!-- Transformer & LLM Engineering -->
+      <section class="section" id="transformer-experiments">
+        <h2>Transformer &amp; LLM Engineering</h2>
+        <p class="sub-intro">Hands-on implementations exploring transformer mechanisms and next-token predictions. Code blocks detail actual algorithms used.</p>
 
-            <!-- NLP 02 -->
-            <div class="nlp-card">
-              <h3>02_iterative_long_story_generation.ipynb <a href="https://github.com/ramcharan377/transformer-text-generation-lab" target="_blank" rel="noreferrer" style="font-size: 0.8rem;">View Notebook &rarr;</a></h3>
-              <p class="nlp-card-desc">Chaining inference batches over sliding windows to bypass context length constraints (1024 tokens).</p>
-              
-              <div class="nlp-grid-details">
-                <div class="nlp-detail-section">
-                  <h4>Mechanism</h4>
-                  <p>Extracts the most recent 150-200 generated tokens to compose the prompt for the next sequence. Prevents repetitive n-gram loops using top-p/top-k sampling parameters.</p>
-                </div>
-                <div class="nlp-detail-section">
-                  <h4>Key Parameters</h4>
-                  <p>
-                    Sliding window: <code>150 - 200 tokens</code><br />
-                    Repetition limit: <code>no_repeat_ngram_size = 3</code><br />
-                    Sampling: <code>top_k = 50</code>, <code>top_p = 0.9</code>
-                  </p>
-                </div>
-              </div>
+        <div class="nlp-list">
+          
+          <div class="nlp-entry">
+            <h3>01. Pre-trained GPT-2 Inference Pipeline</h3>
+            <p class="nlp-meta">Hugging Face Transformers | Parameters: max_length=50, num_return_sequences=3</p>
+            <p>Calculates tokenized prompt forward passes with fixed random seeds to ensure deterministic output generation.</p>
+            <pre class="code-block">Input: "In a shocking turn of events, a herd of unicorns has been discovered living..."
+Output: "...in a remote, previously unexplored valley, in the Andes Mountains. Even more surprising to the researchers was the fact that the unicorns spoke fairly perfect, accented English..."</pre>
+          </div>
 
-              <div>
-                <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Story Progression Log</h4>
-                <div class="nlp-code-sample"><strong>Step 1:</strong> Initial prompt context runs to generate paragraph 1 (tokens 0 - 200).
-<strong>Step 2:</strong> Slide and slice tokens 50-200. Feed as prompt for paragraph 2 (tokens 200 - 400).
-<strong>Step 3:</strong> Generated cohesive 1200+ word output with zero repeating semantic collapses.</div>
-              </div>
-            </div>
+          <div class="nlp-entry">
+            <h3>02. Sliding-Window Long Story Generation</h3>
+            <p class="nlp-meta">Context Window Hacking | Parameters: Window = 150-200 tokens, no_repeat_ngram_size=3, top_p=0.9, top_k=50</p>
+            <p>Loop-chains generation calls by slicing the final 150-200 tokens from the previous iteration as the prompt context for the next block, successfully generating 1000+ words without repetition loops.</p>
+          </div>
 
-            <!-- NLP 03 -->
-            <div class="nlp-card">
-              <h3>03_pytorch_simple_llm.ipynb <a href="https://github.com/ramcharan377/transformer-text-generation-lab" target="_blank" rel="noreferrer" style="font-size: 0.8rem;">View Notebook &rarr;</a></h3>
-              <p class="nlp-card-desc">Training an autoregressive word-level N-gram model on text data from scratch in PyTorch.</p>
-              
-              <div class="nlp-grid-details">
-                <div class="nlp-detail-section">
-                  <h4>Mechanism</h4>
-                  <p>Maps character sequences to index dictionaries. Trains weight embeddings using Cross-Entropy Loss to output index probabilities.</p>
-                </div>
-                <div class="nlp-detail-section">
-                  <h4>Architecture Details</h4>
-                  <p>
-                    Inputs: vocabulary-indexed word tensors<br />
-                    Loss function: PyTorch <code>nn.CrossEntropyLoss</code><br />
-                    Prediction: Autoregressive output prediction
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Model Class Definition</h4>
-                <div class="nlp-code-sample">class SimpleNGramLM(nn.Module):
+          <div class="nlp-entry">
+            <h3>03. Custom PyTorch N-gram Language Model</h3>
+            <p class="nlp-meta">Autoregressive Scratch training | Model Architecture: Word embedding projection with Linear linear output layer</p>
+            <p>Maps a raw text corpus into a vocabulary vocabulary index dictionary, training cross-entropy predictions directly.</p>
+            <pre class="code-block">class SimpleNGramLM(nn.Module):
     def __init__(self, vocab_size, embedding_dim):
         super().__init__()
         self.embeddings = nn.Embedding(vocab_size, embedding_dim)
@@ -545,192 +236,60 @@
         
     def forward(self, inputs):
         embeds = self.embeddings(inputs)
-        out = self.linear(embeds)
-        return out</div>
-              </div>
-            </div>
+        return self.linear(embeds)</pre>
+          </div>
 
-            <!-- NLP 04 -->
-            <div class="nlp-card">
-              <h3>04_numpy_self_attention.ipynb <a href="https://github.com/ramcharan377/transformer-text-generation-lab" target="_blank" rel="noreferrer" style="font-size: 0.8rem;">View Notebook &rarr;</a></h3>
-              <p class="nlp-card-desc">NumPy implementation of the scaled dot-product self-attention mechanism.</p>
-              
-              <div class="nlp-grid-details">
-                <div class="nlp-detail-section">
-                  <h4>Mechanism</h4>
-                  <p>Multiplies input dimensions by query, key, and value weights. Applies softmax along row dimensions and scales outputs by dimension limits.</p>
-                </div>
-                <div class="nlp-detail-section">
-                  <h4>Attention Formula</h4>
-                  <p>
-                    <code>Attention(Q, K, V) = softmax(Q @ K.T / sqrt(d_k)) @ V</code>
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">NumPy Calculation Code</h4>
-                <div class="nlp-code-sample">import numpy as np
-
-def self_attention(Q, K, V):
+          <div class="nlp-entry">
+            <h3>04. Raw NumPy Self-Attention Math</h3>
+            <p class="nlp-meta">Attention Mechanism from scratch | Matrix shapes: (Sequence length, Dimension)</p>
+            <p>Implements scaled dot-product attention formula: softmax(Q @ K.T / sqrt(d_k)) @ V using raw matrices.</p>
+            <pre class="code-block">def self_attention(Q, K, V):
     d_k = Q.shape[-1]
     scores = np.matmul(Q, K.T) / np.sqrt(d_k)
-    # Softmax along columns
     weights = np.exp(scores) / np.sum(np.exp(scores), axis=-1, keepdims=True)
-    output = np.matmul(weights, V)
-    return output, weights</div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ─── Education & Skills Section ─── -->
-    <section class="section" id="education">
-      <div class="container">
-        <div class="edu-skills-layout">
-          
-          <!-- Education Column -->
-          <div>
-            <div class="section-header" style="margin-bottom: 24px;">
-              <span class="section-label">Academic Path</span>
-              <h2 class="section-title" style="font-size: 1.5rem;">Education Timeline</h2>
-            </div>
-            
-            <div class="edu-timeline">
-              <div class="edu-item">
-                <div class="edu-date">2024 — Present</div>
-                <h3>Dayananda Sagar University</h3>
-                <p>B.Tech. in Artificial Intelligence & Robotics Engineering</p>
-                <p style="font-size: 0.82rem; color: var(--text-muted);">Bangalore, India</p>
-              </div>
-              <div class="edu-item">
-                <div class="edu-date">2021 — 2024</div>
-                <h3>Sir M Visvesvaraya Polytechnic</h3>
-                <p>Diploma in Mechanical Engineering</p>
-                <p style="font-size: 0.82rem; color: var(--text-muted);">Hospet, India</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Skills Column -->
-          <div>
-            <div class="section-header" style="margin-bottom: 24px;">
-              <span class="section-label">Capabilities</span>
-              <h2 class="section-title" style="font-size: 1.5rem;">Skills & Tooling</h2>
-            </div>
-            
-            <div class="skills-list">
-              <div class="skills-category">
-                <h3>Robotics & Autonomy</h3>
-                <div class="tags">
-                  <span class="tag">ROS 2</span>
-                  <span class="tag">Nav2</span>
-                  <span class="tag">SLAM Toolbox</span>
-                  <span class="tag">Gazebo Simulator</span>
-                  <span class="tag">MoveIt</span>
-                  <span class="tag">Sensor Fusion</span>
-                </div>
-              </div>
-
-              <div class="skills-category">
-                <h3>Machine Learning / Deep Learning</h3>
-                <div class="tags">
-                  <span class="tag">PyTorch</span>
-                  <span class="tag">TensorFlow</span>
-                  <span class="tag">Gymnasium</span>
-                  <span class="tag">Stable-Baselines3</span>
-                  <span class="tag">Qiskit (Quantum ML)</span>
-                  <span class="tag">Scikit-learn</span>
-                </div>
-              </div>
-
-              <div class="skills-category">
-                <h3>Languages & Platforms</h3>
-                <div class="tags">
-                  <span class="tag">Python</span>
-                  <span class="tag">C++</span>
-                  <span class="tag">Bash Scripting</span>
-                  <span class="tag">Linux</span>
-                  <span class="tag">Docker</span>
-                  <span class="tag">Raspberry Pi</span>
-                </div>
-              </div>
-            </div>
+    return np.matmul(weights, V), weights</pre>
           </div>
 
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ─── Contact Section ─── -->
-    <section class="section" id="contact" style="border-bottom: none;">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Connect</span>
-          <h2 class="section-title">Get In Touch</h2>
-          <p class="section-desc">Open to academic collaborations, research discussions, and internship roles.</p>
-        </div>
+      <hr />
 
-        <div class="contact-layout">
-          <div class="contact-text">
-            <p>
-              Feel free to reach out if you are working on robotic autonomy, reinforcement learning applications, or model compression frameworks.
-            </p>
-            <p>
-              Located in Bangalore, India.
-            </p>
-          </div>
+      <!-- Education Timeline -->
+      <section class="section" id="education">
+        <h2>Education</h2>
+        <ul class="timeline-list">
+          <li>
+            <span class="time-span">2024 — Present</span>: 
+            <strong>B.Tech. in Artificial Intelligence &amp; Robotics Engineering</strong> at Dayananda Sagar University, Bangalore, India.
+          </li>
+          <li>
+            <span class="time-span">2021 — 2024</span>: 
+            <strong>Diploma in Mechanical Engineering</strong> at Sir M Visvesvaraya Polytechnic, Hospet, India.
+          </li>
+        </ul>
+      </section>
 
-          <div class="contact-links-grid">
-            <a href="mailto:ramcharanathyam2006@gmail.com" class="contact-card-link">
-              <div class="contact-card-icon">Email</div>
-              <div class="contact-card-info">
-                <h3>Email</h3>
-                <p>ramcharanathyam2006...</p>
-              </div>
-            </a>
+      <hr />
 
-            <a href="https://github.com/ramcharan377" class="contact-card-link" target="_blank" rel="noreferrer">
-              <div class="contact-card-icon">GitHub</div>
-              <div class="contact-card-info">
-                <h3>GitHub</h3>
-                <p>ramcharan377</p>
-              </div>
-            </a>
+      <!-- Technical Skills -->
+      <section class="section" id="skills">
+        <h2>Technical Skills</h2>
+        <ul class="skills-bullet-list">
+          <li><strong>Robotics &amp; Control</strong>: ROS 2, Nav2 waypoint planning, SLAM Toolbox mapping, Gazebo simulators, MoveIt joint planning, sensor fusion.</li>
+          <li><strong>Machine Learning</strong>: PyTorch, TensorFlow, Gymnasium environments, Stable-Baselines3 agents, Qiskit variational quantum classifiers.</li>
+          <li><strong>Languages &amp; Core Tooling</strong>: Python, C++, NumPy mathematical arrays, Linux bash scripting, Docker containers, git, Jupyter notebooks.</li>
+        </ul>
+      </section>
 
-            <a href="https://linkedin.com/in/athyam-ramcharan" class="contact-card-link" target="_blank" rel="noreferrer">
-              <div class="contact-card-icon">LinkedIn</div>
-              <div class="contact-card-info">
-                <h3>LinkedIn</h3>
-                <p>athyam-ramcharan</p>
-              </div>
-            </a>
+      <hr />
 
-            <a href="./ramcharan_resume_updated.pdf" class="contact-card-link" target="_blank" rel="noreferrer">
-              <div class="contact-card-icon">Resume</div>
-              <div class="contact-card-info">
-                <h3>Resume</h3>
-                <p>Download PDF</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── Footer ─── -->
-    <footer class="footer">
-      <div class="container">
-        <p class="footer-text">
-          &copy; 2026 Athyam Ramcharan. All rights reserved. Professional Portfolio.
-        </p>
-      </div>
-    </footer>
-
+      <!-- Footer / Info -->
+      <footer class="page-footer-info">
+        <p>&copy; 2026 Athyam Ramcharan. Minimal academic homepage. Built using raw HTML/CSS.</p>
+      </footer>
+    </main>
+    
     <script src="script.js"></script>
   </body>
 </html>

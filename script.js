@@ -1,76 +1,9 @@
 /* ============================================================
    ATHYAM RAMCHARAN — PORTFOLIO JAVASCRIPT
-   Clean interactions, tab filters, and lightbox.
+   Minimal interactions for gameplay GIF zoom lightbox.
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // ─── Mobile Navigation Toggle ───
-  const menuToggle = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
-
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-    });
-
-    // Close menu when a link is clicked
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-      });
-    });
-  }
-
-  // ─── Sticky Header Active Links ───
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  const onScroll = () => {
-    const scrollPos = window.scrollY + 100;
-
-    sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      const id = section.getAttribute('id');
-
-      if (scrollPos >= top && scrollPos < top + height) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-  };
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // Run once initially to highlight active section
-
-  // ─── Tab Switcher (Experiments) ───
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabPanels = document.querySelectorAll('.tab-panel');
-
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const targetPanel = button.getAttribute('data-tab');
-
-      // Update active tab button
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-
-      // Update active tab panel
-      tabPanels.forEach(panel => {
-        if (panel.id === targetPanel) {
-          panel.classList.add('active');
-        } else {
-          panel.classList.remove('active');
-        }
-      });
-    });
-  });
-
-  // ─── Lightbox Gallery (Zooming GIFs) ───
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxCaption = document.getElementById('lightbox-caption');
@@ -92,10 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Add click listener to RL GIF wrappers
-  document.querySelectorAll('.rl-gif-wrapper').forEach(wrapper => {
-    wrapper.addEventListener('click', () => {
-      const img = wrapper.querySelector('img');
+  // Add click listener to RL GIF elements and their parent boxes
+  document.querySelectorAll('.rl-media-box, .rl-sub-box').forEach(box => {
+    box.addEventListener('click', () => {
+      const img = box.querySelector('img');
       if (img) {
         openLightbox(img.src, img.alt);
       }
