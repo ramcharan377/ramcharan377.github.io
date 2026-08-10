@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Athyam Ramcharan — AI & Robotics Engineering student at Dayananda Sagar University, Bangalore. Portfolio showcasing projects in ROS 2, autonomous systems, machine learning, and computer vision."
+      content="Athyam Ramcharan — AI & Robotics Engineering student at Dayananda Sagar University, Bangalore. Portfolio showcasing projects in ROS 2, autonomous systems, reinforcement learning, transformers, and computer vision."
     />
     <meta name="author" content="Athyam Ramcharan" />
 
@@ -37,6 +37,13 @@
     </div>
     <div class="noise-overlay" aria-hidden="true"></div>
 
+    <!-- Lightbox for GIF previews -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+      <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+
     <!-- ─── Navigation ─── -->
     <nav class="navbar" id="navbar">
       <div class="container">
@@ -53,7 +60,9 @@
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#education">Education</a>
+          <a href="#research">Research</a>
           <a href="#projects">Projects</a>
+          <a href="#experiments">Experiments</a>
           <a href="#contact">Contact</a>
         </div>
       </div>
@@ -75,8 +84,8 @@
             </p>
             <p class="hero-description reveal reveal-delay-3">
               An AI & Robotics Engineering student passionate about building autonomous systems,
-              machine learning pipelines, and embedded solutions. Currently studying at
-              Dayananda Sagar University, Bangalore.
+              training RL agents, dissecting transformers, and deploying ML on embedded hardware.
+              Currently studying at Dayananda Sagar University, Bangalore.
             </p>
             <div class="hero-buttons reveal reveal-delay-4">
               <a class="btn btn-primary" href="./ramcharan_resume_updated.pdf" target="_blank" rel="noreferrer">
@@ -99,7 +108,7 @@
             <div class="stat-card reveal reveal-delay-3">
               <div class="stat-card-icon teal">🧠</div>
               <h3>Machine Learning & AI</h3>
-              <p>Deep learning, computer vision, NLP, quantum-enhanced ML</p>
+              <p>Deep learning, transformers, RL agents, NLP, quantum ML</p>
             </div>
             <div class="stat-card reveal reveal-delay-4">
               <div class="stat-card-icon pink">⚙️</div>
@@ -131,10 +140,10 @@
               motion planning, and embedded deployment to build robots that perceive, reason, and act.
             </p>
             <p class="reveal reveal-delay-1">
-              Beyond robotics, I explore machine learning and computer vision — from low-resource
-              LLMs for Indian languages to quantum-enhanced ML experiments for disease detection.
-              I'm driven by the challenge of making intelligent systems work in real-world,
-              resource-constrained environments.
+              Beyond robotics, I explore the internals of large language models — from building
+              custom N-gram models in raw PyTorch to implementing self-attention in NumPy. I also
+              train reinforcement learning agents across classic control, Atari, and Box2D environments,
+              and research geometric knowledge distillation techniques for efficient model compression.
             </p>
           </div>
 
@@ -201,9 +210,9 @@
               <span class="skill-tag">Scikit-learn</span>
               <span class="skill-tag">HuggingFace</span>
               <span class="skill-tag">OpenCV</span>
-              <span class="skill-tag">LoRA</span>
+              <span class="skill-tag">Stable-Baselines3</span>
+              <span class="skill-tag">Gymnasium</span>
               <span class="skill-tag">Qiskit</span>
-              <span class="skill-tag">PennyLane</span>
             </div>
           </div>
 
@@ -233,7 +242,7 @@
               <span class="skill-tag">Docker</span>
               <span class="skill-tag">Raspberry Pi</span>
               <span class="skill-tag">FPGA</span>
-              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">NumPy</span>
               <span class="skill-tag">Jupyter</span>
             </div>
           </div>
@@ -274,6 +283,51 @@
       </div>
     </section>
 
+    <!-- ─── Research Section (Geometric KD) ─── -->
+    <section class="section" id="research">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>
+            Research
+          </span>
+          <h2 class="section-title">Geometric Knowledge Distillation</h2>
+          <p class="section-subtitle">Exploring efficient model compression through geometric representations of neural network knowledge.</p>
+        </div>
+
+        <div class="research-card reveal">
+          <div class="research-card-content">
+            <div class="research-card-body">
+              <h3>Geometric KD — Research Plan</h3>
+              <p>
+                Knowledge distillation compresses large "teacher" networks into smaller, deployable "student" models.
+                My research explores <strong>geometric approaches</strong> to this problem — leveraging the geometric
+                structure of learned representations (manifold alignment, distance preservation, and topological constraints)
+                to transfer richer knowledge than standard logit-matching or feature-mimicking methods.
+              </p>
+              <p>
+                This work is motivated by the need to deploy large models on resource-constrained devices like
+                Raspberry Pi and mobile robots, where computational budgets are tight but accuracy requirements remain high.
+                The approach investigates how preserving the <em>geometric relationships</em> between data points
+                in the teacher's representation space leads to better student generalization.
+              </p>
+              <div class="research-tags">
+                <span class="project-tag">Knowledge Distillation</span>
+                <span class="project-tag">Model Compression</span>
+                <span class="project-tag">Geometric ML</span>
+                <span class="project-tag">Representation Learning</span>
+                <span class="project-tag">Edge Deployment</span>
+              </div>
+              <a class="btn btn-outline" href="./geometric_kd_plan.pdf" target="_blank" rel="noreferrer" style="margin-top: 20px;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" /></svg>
+                Read Full Research Plan (PDF)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ─── Projects Section ─── -->
     <section class="section" id="projects">
       <div class="container">
@@ -287,7 +341,7 @@
         </div>
 
         <div class="projects-grid stagger-children">
-          <!-- Project 1 -->
+          <!-- Project 1: Autonomous Drone -->
           <div class="project-card reveal" style="--i:0">
             <div class="project-card-header">
               <div class="project-icon" style="background: rgba(108,99,255,0.15); color: var(--accent-1);">🛩️</div>
@@ -305,28 +359,45 @@
             </div>
           </div>
 
-          <!-- Project 2 -->
+          <!-- Project 2: Transformer Lab -->
           <div class="project-card reveal" style="--i:1">
             <div class="project-card-header">
-              <div class="project-icon" style="background: rgba(0,212,170,0.15); color: var(--accent-2);">⚛️</div>
+              <div class="project-icon" style="background: rgba(0,212,170,0.15); color: var(--accent-2);">📝</div>
+              <a class="project-link" href="https://github.com/ramcharan377/transformer-text-generation-lab" target="_blank" rel="noreferrer" aria-label="View on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+              </a>
+            </div>
+            <h3>Transformer & LLM Engineering Lab</h3>
+            <p>Four hands-on notebooks dissecting LLMs: GPT-2 inference, sliding-window long-form generation with nucleus sampling, a custom PyTorch N-gram language model from scratch, and raw self-attention implemented in NumPy.</p>
+            <div class="project-tags">
+              <span class="project-tag">GPT-2</span>
+              <span class="project-tag">PyTorch</span>
+              <span class="project-tag">NumPy</span>
+              <span class="project-tag">HuggingFace</span>
+            </div>
+          </div>
+
+          <!-- Project 3: Quantum ML -->
+          <div class="project-card reveal" style="--i:2">
+            <div class="project-card-header">
+              <div class="project-icon" style="background: rgba(255,107,157,0.15); color: var(--accent-3);">⚛️</div>
               <a class="project-link" href="https://github.com/ramcharan377" target="_blank" rel="noreferrer" aria-label="View on GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
               </a>
             </div>
             <h3>Quantum-Enhanced ML</h3>
-            <p>Hybrid quantum-classical machine learning pipeline for disease detection, leveraging Qiskit and PennyLane with classical Scikit-learn models.</p>
+            <p>Hybrid quantum-classical machine learning pipeline for disease detection, leveraging Qiskit and PennyLane quantum circuits with classical Scikit-learn models.</p>
             <div class="project-tags">
               <span class="project-tag">Qiskit</span>
               <span class="project-tag">PennyLane</span>
               <span class="project-tag">Scikit-learn</span>
-              <span class="project-tag">Python</span>
             </div>
           </div>
 
-          <!-- Project 3 -->
-          <div class="project-card reveal" style="--i:2">
+          <!-- Project 4: Low-Resource LLMs -->
+          <div class="project-card reveal" style="--i:3">
             <div class="project-card-header">
-              <div class="project-icon" style="background: rgba(255,107,157,0.15); color: var(--accent-3);">🗣️</div>
+              <div class="project-icon" style="background: rgba(255,193,68,0.15); color: #ffc144;">🗣️</div>
               <a class="project-link" href="https://github.com/ramcharan377" target="_blank" rel="noreferrer" aria-label="View on GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
               </a>
@@ -337,58 +408,130 @@
               <span class="project-tag">HuggingFace</span>
               <span class="project-tag">LoRA</span>
               <span class="project-tag">NLP</span>
-              <span class="project-tag">Transformers</span>
+              <span class="project-tag">Tokenization</span>
             </div>
           </div>
 
-          <!-- Project 4 -->
-          <div class="project-card reveal" style="--i:3">
-            <div class="project-card-header">
-              <div class="project-icon" style="background: rgba(255,193,68,0.15); color: #ffc144;">📝</div>
-              <a class="project-link" href="https://github.com/ramcharan377/transformer-text-generation-lab" target="_blank" rel="noreferrer" aria-label="View on GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
-              </a>
-            </div>
-            <h3>Transformer Text Generation Lab</h3>
-            <p>Hands-on lab exploring transformer architectures for text generation, including attention mechanisms, positional encoding, and decoding strategies.</p>
-            <div class="project-tags">
-              <span class="project-tag">Transformers</span>
-              <span class="project-tag">PyTorch</span>
-              <span class="project-tag">NLP</span>
-            </div>
-          </div>
-
-          <!-- Project 5 -->
+          <!-- Project 5: RL Agents -->
           <div class="project-card reveal" style="--i:4">
             <div class="project-card-header">
               <div class="project-icon" style="background: rgba(0,188,212,0.15); color: #4dd0e1;">🎮</div>
-              <a class="project-link" href="https://github.com/ramcharan377/reinforcement-learning-agent" target="_blank" rel="noreferrer" aria-label="View on GitHub">
+              <a class="project-link" href="https://github.com/ramcharan377/Reinforcement-Learning-" target="_blank" rel="noreferrer" aria-label="View on GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
               </a>
             </div>
-            <h3>Reinforcement Learning Agent</h3>
-            <p>RL agent training with Q-learning and policy gradient methods for game environments, exploring reward shaping and exploration strategies.</p>
+            <h3>Reinforcement Learning Agents</h3>
+            <p>9 RL agents trained across Gymnasium environments: Q-Learning on FrozenLake & Taxi, REINFORCE on LunarLander, DQN on Breakout, and Actor-Critic on BipedalWalker. Each agent recorded frame-by-frame.</p>
             <div class="project-tags">
-              <span class="project-tag">RL</span>
-              <span class="project-tag">Python</span>
-              <span class="project-tag">OpenAI Gym</span>
+              <span class="project-tag">Q-Learning</span>
+              <span class="project-tag">DQN</span>
+              <span class="project-tag">REINFORCE</span>
+              <span class="project-tag">Actor-Critic</span>
             </div>
           </div>
 
-          <!-- Project 6 -->
+          <!-- Project 6: GamePlay Agents -->
           <div class="project-card reveal" style="--i:5">
             <div class="project-card-header">
               <div class="project-icon" style="background: rgba(156,39,176,0.15); color: #ba68c8;">🕹️</div>
-              <a class="project-link" href="https://github.com/ramcharan377/GamePlayAgents" target="_blank" rel="noreferrer" aria-label="View on GitHub">
+              <a class="project-link" href="https://github.com/ramcharan377/GamePlay-Agents-master" target="_blank" rel="noreferrer" aria-label="View on GitHub">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
               </a>
             </div>
             <h3>GamePlay Agents</h3>
-            <p>AI agents trained to play games using various ML approaches, demonstrating decision-making, strategy optimization, and adaptive behavior.</p>
+            <p>RL agents for classic control, grid-world, Box2D and Atari environments built with Gymnasium, PyTorch and Stable-Baselines3. Every agent trained and recorded with real gameplay GIFs.</p>
             <div class="project-tags">
-              <span class="project-tag">AI Agents</span>
-              <span class="project-tag">Python</span>
-              <span class="project-tag">Game AI</span>
+              <span class="project-tag">Gymnasium</span>
+              <span class="project-tag">Stable-Baselines3</span>
+              <span class="project-tag">PyTorch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Experiments & Results Section (GIF Gallery) ─── -->
+    <section class="section" id="experiments">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605" /></svg>
+            Experiments & Results
+          </span>
+          <h2 class="section-title">Trained agents in action</h2>
+          <p class="section-subtitle">Real gameplay recordings of RL agents trained across different environments. Click any to view full-size.</p>
+        </div>
+
+        <div class="experiments-grid stagger-children">
+          <div class="experiment-card reveal" style="--i:0">
+            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/cartpole_random_agent.gif" alt="CartPole — Random Agent" loading="lazy" />
+            <div class="experiment-info">
+              <h4>CartPole</h4>
+              <p>Random Agent · Environment Exploration</p>
+            </div>
+          </div>
+
+          <div class="experiment-card reveal" style="--i:1">
+            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/frozenlake_qlearning_greedy.gif" alt="FrozenLake — Q-Learning" loading="lazy" />
+            <div class="experiment-info">
+              <h4>FrozenLake</h4>
+              <p>Tabular Q-Learning · Learns to cross the lake</p>
+            </div>
+          </div>
+
+          <div class="experiment-card reveal" style="--i:2">
+            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/taxi_qlearning_greedy.gif" alt="Taxi — Q-Learning" loading="lazy" />
+            <div class="experiment-info">
+              <h4>Taxi</h4>
+              <p>SARSA vs Q-Learning · Converges from −700 to +8</p>
+            </div>
+          </div>
+
+          <div class="experiment-card reveal" style="--i:3">
+            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/lunarlander_reinforce.gif" alt="LunarLander — REINFORCE" loading="lazy" />
+            <div class="experiment-info">
+              <h4>LunarLander</h4>
+              <p>REINFORCE + Baseline · Policy Gradient</p>
+            </div>
+          </div>
+
+          <div class="experiment-card reveal" style="--i:4">
+            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/breakout_dqn.gif" alt="Breakout — DQN" loading="lazy" />
+            <div class="experiment-info">
+              <h4>Breakout (Atari)</h4>
+              <p>Deep Q-Network · Frame-stacking</p>
+            </div>
+          </div>
+
+          <div class="experiment-card reveal" style="--i:5">
+            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/actorcritic_walker.gif" alt="BipedalWalker — Actor-Critic" loading="lazy" />
+            <div class="experiment-info">
+              <h4>BipedalWalker</h4>
+              <p>Actor-Critic · Continuous control</p>
+            </div>
+          </div>
+
+          <div class="experiment-card reveal" style="--i:6">
+            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/mountaincar_random_agent.gif" alt="MountainCar — Random Agent" loading="lazy" />
+            <div class="experiment-info">
+              <h4>MountainCar</h4>
+              <p>Random Agent · Classic Control</p>
+            </div>
+          </div>
+
+          <div class="experiment-card reveal" style="--i:7">
+            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/acrobot_random_agent.gif" alt="Acrobot — Random Agent" loading="lazy" />
+            <div class="experiment-info">
+              <h4>Acrobot</h4>
+              <p>Random Agent · Environment Exploration</p>
+            </div>
+          </div>
+
+          <div class="experiment-card reveal" style="--i:8">
+            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/bandit_ad_selection.gif" alt="Multi-Armed Bandit — Ad Selection" loading="lazy" />
+            <div class="experiment-info">
+              <h4>Multi-Armed Bandit</h4>
+              <p>Exploration Strategies · Ad CTR Optimization</p>
             </div>
           </div>
         </div>
