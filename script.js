@@ -1,163 +1,136 @@
 /* ============================================================
-   ATHYAM RAMCHARAN — STUDENT PORTFOLIO
-   script.js — Interactions, animations & typing effect
+   ATHYAM RAMCHARAN — PORTFOLIO JAVASCRIPT
+   Clean interactions, tab filters, theme toggle, and lightbox.
    ============================================================ */
 
-// ─── Scroll-Reveal Observer ───
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-        revealObserver.unobserve(entry.target);
-      }
-    }
-  },
-  { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-);
+document.addEventListener('DOMContentLoaded', () => {
+  // ─── Theme Toggling ───
+  const themeToggle = document.getElementById('theme-toggle');
+  const currentTheme = localStorage.getItem('theme') || 'light';
 
-document.querySelectorAll('.reveal').forEach((el) => {
-  revealObserver.observe(el);
-});
+  // Apply initial theme
+  document.documentElement.setAttribute('data-theme', currentTheme);
 
-// ─── Navbar scroll effect ───
-const navbar = document.getElementById('navbar');
-let lastScroll = 0;
-
-window.addEventListener('scroll', () => {
-  const currentScroll = window.scrollY;
-  if (currentScroll > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-  lastScroll = currentScroll;
-}, { passive: true });
-
-// ─── Mobile nav toggle ───
-const navToggle = document.getElementById('nav-toggle');
-const navLinks = document.getElementById('nav-links');
-
-if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('open');
-    navLinks.classList.toggle('open');
+  themeToggle.addEventListener('click', () => {
+    const activeTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
   });
 
-  // Close on link click
-  navLinks.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      navToggle.classList.remove('open');
-      navLinks.classList.remove('open');
+  // ─── Mobile Navigation Toggle ───
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
     });
-  });
-}
 
-// ─── Active nav link highlight ───
-const sections = document.querySelectorAll('section[id]');
-const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+    // Close menu when a link is clicked
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+      });
+    });
+  }
 
-const activateNavLink = () => {
-  const scrollY = window.scrollY + 120;
+  // ─── Sticky Header Active Links ───
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
 
-  sections.forEach((section) => {
-    const top = section.offsetTop;
-    const height = section.offsetHeight;
-    const id = section.getAttribute('id');
+  const onScroll = () => {
+    const scrollPos = window.scrollY + 100;
 
-    if (scrollY >= top && scrollY < top + height) {
-      navAnchors.forEach((a) => {
-        a.classList.remove('active');
-        if (a.getAttribute('href') === `#${id}`) {
-          a.classList.add('active');
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      const id = section.getAttribute('id');
+
+      if (scrollPos >= top && scrollPos < top + height) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // ─── Tab Switcher (Experiments) ───
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabPanels = document.querySelectorAll('.tab-panel');
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetPanel = button.getAttribute('data-tab');
+
+      // Update active tab button
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      // Update active tab panel
+      tabPanels.forEach(panel => {
+        if (panel.id === targetPanel) {
+          panel.classList.add('active');
+        } else {
+          panel.classList.remove('active');
         }
       });
-    }
+    });
   });
-};
 
-window.addEventListener('scroll', activateNavLink, { passive: true });
-activateNavLink();
+  // ─── Lightbox Gallery (Zooming GIFs) ───
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const lightboxClose = document.getElementById('lightbox-close');
 
-// ─── Typing Effect ───
-const typedElement = document.getElementById('typed-text');
-const phrases = [
-  'AI & Robotics Engineering Student',
-  'ROS 2 Developer',
-  'Machine Learning Enthusiast',
-  'Reinforcement Learning Explorer',
-  'Computer Vision Researcher',
-];
-
-let phraseIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let typeSpeed = 80;
-
-function typeEffect() {
-  if (!typedElement) return;
-
-  const currentPhrase = phrases[phraseIndex];
-
-  if (isDeleting) {
-    typedElement.textContent = currentPhrase.substring(0, charIndex - 1);
-    charIndex--;
-    typeSpeed = 40;
-  } else {
-    typedElement.textContent = currentPhrase.substring(0, charIndex + 1);
-    charIndex++;
-    typeSpeed = 80;
-  }
-
-  if (!isDeleting && charIndex === currentPhrase.length) {
-    typeSpeed = 2000; // Pause at end
-    isDeleting = true;
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    phraseIndex = (phraseIndex + 1) % phrases.length;
-    typeSpeed = 400; // Pause before next phrase
-  }
-
-  setTimeout(typeEffect, typeSpeed);
-}
-
-// Start typing after a short delay
-setTimeout(typeEffect, 1000);
-
-// ─── Lightbox for GIFs/Images ───
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const lightboxCaption = document.getElementById('lightbox-caption');
-const lightboxClose = document.getElementById('lightbox-close');
-
-document.querySelectorAll('.gif-thumb').forEach((thumb) => {
-  thumb.addEventListener('click', () => {
+  const openLightbox = (imgSrc, imgAlt) => {
     if (lightbox && lightboxImg) {
-      lightboxImg.src = thumb.src;
-      lightboxCaption.textContent = thumb.alt || '';
+      lightboxImg.src = imgSrc;
+      lightboxCaption.textContent = imgAlt || 'Experiment Gameplay';
       lightbox.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
+  };
+
+  const closeLightbox = () => {
+    if (lightbox) {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  };
+
+  // Add click listener to RL GIF wrappers
+  document.querySelectorAll('.rl-gif-wrapper').forEach(wrapper => {
+    wrapper.addEventListener('click', () => {
+      const img = wrapper.querySelector('img');
+      if (img) {
+        openLightbox(img.src, img.alt);
+      }
+    });
   });
-});
 
-if (lightboxClose) {
-  lightboxClose.addEventListener('click', closeLightbox);
-}
-
-if (lightbox) {
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-}
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeLightbox();
-});
-
-function closeLightbox() {
-  if (lightbox) {
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
   }
-}
+
+  if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeLightbox();
+    }
+  });
+});

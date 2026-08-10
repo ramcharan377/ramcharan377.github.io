@@ -1,119 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Athyam Ramcharan — AI & Robotics Engineering student at Dayananda Sagar University, Bangalore. Portfolio showcasing projects in ROS 2, autonomous systems, reinforcement learning, transformers, and computer vision."
+      content="Athyam Ramcharan — Student Portfolio. AI & Robotics Engineering student at Dayananda Sagar University, Bangalore. Showcasing academic research in Geometric Knowledge Distillation and reinforcement learning experiments."
     />
     <meta name="author" content="Athyam Ramcharan" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Athyam Ramcharan | Student Portfolio" />
-    <meta property="og:description" content="AI & Robotics Engineering student building autonomous systems, ML pipelines, and embedded solutions." />
+    <!-- Open Graph for sharing -->
+    <meta property="og:title" content="Athyam Ramcharan | AI & Robotics Student Portfolio" />
+    <meta property="og:description" content="Academic portfolio showcasing research in Geometric KD, autonomous systems, and reinforcement learning." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ramcharan377.github.io" />
 
-    <title>Athyam Ramcharan | Student Portfolio</title>
+    <title>Athyam Ramcharan | AI & Robotics Portfolio</title>
 
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Animated Background -->
-    <div class="bg-orbs" aria-hidden="true">
-      <div class="orb orb--1"></div>
-      <div class="orb orb--2"></div>
-      <div class="orb orb--3"></div>
-      <div class="orb orb--4"></div>
-    </div>
-    <div class="noise-overlay" aria-hidden="true"></div>
-
-    <!-- Lightbox for GIF previews -->
-    <div class="lightbox" id="lightbox">
-      <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
-      <img class="lightbox-img" id="lightbox-img" src="" alt="" />
-      <p class="lightbox-caption" id="lightbox-caption"></p>
+    <!-- Lightbox Modal for zooming GIFs -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">&times;</button>
+      <div class="lightbox-content">
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Gameplay Zoom" />
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+      </div>
     </div>
 
-    <!-- ─── Navigation ─── -->
-    <nav class="navbar" id="navbar">
+    <!-- ─── Header & Navigation ─── -->
+    <header class="header">
       <div class="container">
-        <a class="nav-brand" href="#hero">AR.</a>
+        <a href="#home" class="logo">Athyam Ramcharan</a>
+        
+        <nav class="nav-menu" id="nav-menu">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#research" class="nav-link">Research</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#experiments" class="nav-link">Experiments</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
 
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <div class="nav-links" id="nav-links">
-          <a href="#hero">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#education">Education</a>
-          <a href="#research">Research</a>
-          <a href="#projects">Projects</a>
-          <a href="#experiments">Experiments</a>
-          <a href="#contact">Contact</a>
+        <div class="controls">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+            <!-- Moon Icon -->
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+            </svg>
+            <!-- Sun Icon -->
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707m2.828 9.9a5 5 0 117.072 0l-7.072 0z" />
+            </svg>
+          </button>
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
         </div>
       </div>
-    </nav>
+    </header>
 
     <!-- ─── Hero Section ─── -->
-    <section class="hero section" id="hero">
+    <section class="hero" id="home">
       <div class="container">
-        <div class="hero-content">
+        <div class="hero-layout">
           <div class="hero-text">
-            <p class="hero-greeting reveal">
-              <span class="wave">👋</span> Hey there, I'm
+            <h1>Athyam Ramcharan</h1>
+            <p class="hero-subtitle">AI & Robotics Engineering Student</p>
+            <p class="hero-desc">
+              Currently pursuing my B.Tech at Dayananda Sagar University, Bangalore. My work focuses on building autonomous systems, training reinforcement learning agents, engineering language models, and bringing up embedded hardware platforms.
             </p>
-            <h1 class="hero-name reveal reveal-delay-1">
-              Athyam<br /><span class="gradient-text">Ramcharan</span>
-            </h1>
-            <p class="hero-role reveal reveal-delay-2">
-              <span id="typed-text"></span><span class="typed-cursor"></span>
-            </p>
-            <p class="hero-description reveal reveal-delay-3">
-              An AI & Robotics Engineering student passionate about building autonomous systems,
-              training RL agents, dissecting transformers, and deploying ML on embedded hardware.
-              Currently studying at Dayananda Sagar University, Bangalore.
-            </p>
-            <div class="hero-buttons reveal reveal-delay-4">
-              <a class="btn btn-primary" href="./ramcharan_resume_updated.pdf" target="_blank" rel="noreferrer">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
-                Download CV
+            <div class="hero-buttons">
+              <a href="./ramcharan_resume_updated.pdf" class="btn btn-primary" target="_blank" rel="noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+                Download Resume (CV)
               </a>
-              <a class="btn btn-outline" href="https://github.com/ramcharan377" target="_blank" rel="noreferrer">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                GitHub
+              <a href="https://github.com/ramcharan377" class="btn btn-secondary" target="_blank" rel="noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                GitHub Profile
               </a>
             </div>
           </div>
 
-          <div class="hero-stats">
-            <div class="stat-card reveal reveal-delay-2">
-              <div class="stat-card-icon violet">🤖</div>
-              <h3>Robotics & Autonomy</h3>
-              <p>ROS 2, SLAM, Nav2, sensor fusion, autonomous drone systems</p>
+          <div class="hero-highlights">
+            <div class="highlight-card">
+              <h3>🤖 Robotics Core</h3>
+              <p>Specializing in ROS 2, Gazebo simulation, SLAM navigations, sensor fusion, and drone autonomy stacks.</p>
             </div>
-            <div class="stat-card reveal reveal-delay-3">
-              <div class="stat-card-icon teal">🧠</div>
-              <h3>Machine Learning & AI</h3>
-              <p>Deep learning, transformers, RL agents, NLP, quantum ML</p>
+            <div class="highlight-card">
+              <h3>🧠 Applied AI/ML</h3>
+              <p>Experience in building NLP transformers, tuning low-resource models, and training reinforcement learning agents.</p>
             </div>
-            <div class="stat-card reveal reveal-delay-4">
-              <div class="stat-card-icon pink">⚙️</div>
-              <h3>Embedded Systems</h3>
-              <p>Raspberry Pi, FPGA, hardware bring-up, real-time systems</p>
+            <div class="highlight-card">
+              <h3>🔌 Edge hardware</h3>
+              <p>Familiar with Raspberry Pi bring-up, FPGA design verification, and deploying real-time systems.</p>
             </div>
           </div>
         </div>
@@ -123,207 +111,65 @@
     <!-- ─── About Section ─── -->
     <section class="section" id="about">
       <div class="container">
-        <div class="reveal">
-          <span class="section-label">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0" /></svg>
-            About Me
-          </span>
-          <h2 class="section-title">Research-oriented student in<br />robotics & machine learning</h2>
-          <p class="section-subtitle">Building at the intersection of hardware and intelligence.</p>
+        <div class="section-header">
+          <span class="section-label">About Me</span>
+          <h2 class="section-title">Background & Interests</h2>
+          <p class="section-desc">Bridging hardware mechanics and machine learning algorithms to build intelligent systems.</p>
         </div>
 
-        <div class="about-grid">
-          <div class="about-text">
-            <p class="reveal">
-              I'm an AI & Robotics Engineering student at Dayananda Sagar University, Bangalore.
-              My work centers on ROS 2-based autonomous systems, combining SLAM, sensor fusion,
-              motion planning, and embedded deployment to build robots that perceive, reason, and act.
-            </p>
-            <p class="reveal reveal-delay-1">
-              Beyond robotics, I explore the internals of large language models — from building
-              custom N-gram models in raw PyTorch to implementing self-attention in NumPy. I also
-              train reinforcement learning agents across classic control, Atari, and Box2D environments,
-              and research geometric knowledge distillation techniques for efficient model compression.
-            </p>
-          </div>
-
-          <div class="about-info">
-            <div class="info-item reveal">
-              <div class="label">Name</div>
-              <div class="value">Athyam Ramcharan</div>
-            </div>
-            <div class="info-item reveal reveal-delay-1">
-              <div class="label">University</div>
-              <div class="value">DSU, Bangalore</div>
-            </div>
-            <div class="info-item reveal reveal-delay-2">
-              <div class="label">Degree</div>
-              <div class="value">B.Tech AI & Robotics</div>
-            </div>
-            <div class="info-item reveal reveal-delay-3">
-              <div class="label">Email</div>
-              <div class="value">ramcharanathyam2006@gmail.com</div>
-            </div>
+        <div style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.8; max-width: 800px;">
+          <p style="margin-bottom: 16px;">
+            My engineering path started with a Diploma in Mechanical Engineering, which gave me strong foundations in mechanics, dynamics, and hardware interfaces. Moving into my B.Tech in Artificial Intelligence & Robotics at DSU Bangalore, I focused on adding cognitive capabilities to physical machines.
+          </p>
+          <p style="margin-bottom: 24px;">
+            Currently, I am looking at knowledge distillation methods for neural network compression, making deep learning models efficient enough to run on embedded controllers at the edge.
+          </p>
+          <div class="tags">
+            <span class="tag">ROS 2</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">Reinforcement Learning</span>
+            <span class="tag">LLM Engineering</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Gazebo</span>
+            <span class="tag">Embedded Systems</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ─── Skills Section ─── -->
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="reveal">
-          <span class="section-label">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.049.58.025 1.193-.14 1.743" /></svg>
-            Skills
-          </span>
-          <h2 class="section-title">Technologies & tools I work with</h2>
-          <p class="section-subtitle">A mix of robotics, AI, programming, and development tools.</p>
-        </div>
-
-        <div class="skills-grid stagger-children">
-          <div class="skill-category reveal" style="--i:0">
-            <div class="skill-category-header">
-              <div class="skill-category-icon" style="background: rgba(108,99,255,0.15); color: var(--accent-1);">🤖</div>
-              <h3>Robotics & Autonomy</h3>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">ROS 2</span>
-              <span class="skill-tag">SLAM Toolbox</span>
-              <span class="skill-tag">Nav2</span>
-              <span class="skill-tag">Gazebo</span>
-              <span class="skill-tag">Sensor Fusion</span>
-              <span class="skill-tag">URDF / Xacro</span>
-              <span class="skill-tag">MoveIt</span>
-              <span class="skill-tag">PX4</span>
-            </div>
-          </div>
-
-          <div class="skill-category reveal" style="--i:1">
-            <div class="skill-category-header">
-              <div class="skill-category-icon" style="background: rgba(0,212,170,0.15); color: var(--accent-2);">🧠</div>
-              <h3>Machine Learning & AI</h3>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">PyTorch</span>
-              <span class="skill-tag">TensorFlow</span>
-              <span class="skill-tag">Scikit-learn</span>
-              <span class="skill-tag">HuggingFace</span>
-              <span class="skill-tag">OpenCV</span>
-              <span class="skill-tag">Stable-Baselines3</span>
-              <span class="skill-tag">Gymnasium</span>
-              <span class="skill-tag">Qiskit</span>
-            </div>
-          </div>
-
-          <div class="skill-category reveal" style="--i:2">
-            <div class="skill-category-header">
-              <div class="skill-category-icon" style="background: rgba(255,107,157,0.15); color: var(--accent-3);">💻</div>
-              <h3>Programming Languages</h3>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">C / C++</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">Bash</span>
-              <span class="skill-tag">MATLAB</span>
-              <span class="skill-tag">SQL</span>
-            </div>
-          </div>
-
-          <div class="skill-category reveal" style="--i:3">
-            <div class="skill-category-header">
-              <div class="skill-category-icon" style="background: rgba(255,193,68,0.15); color: #ffc144;">🛠️</div>
-              <h3>Tools & Platforms</h3>
-            </div>
-            <div class="skill-tags">
-              <span class="skill-tag">Git / GitHub</span>
-              <span class="skill-tag">Linux</span>
-              <span class="skill-tag">Docker</span>
-              <span class="skill-tag">Raspberry Pi</span>
-              <span class="skill-tag">FPGA</span>
-              <span class="skill-tag">NumPy</span>
-              <span class="skill-tag">Jupyter</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── Education Section ─── -->
-    <section class="section" id="education">
-      <div class="container">
-        <div class="reveal">
-          <span class="section-label">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
-            Education
-          </span>
-          <h2 class="section-title">Academic background</h2>
-          <p class="section-subtitle">Formal training in AI, robotics, and mechanical engineering.</p>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <span class="timeline-date">2024 — Present</span>
-              <h3>B.Tech in Artificial Intelligence & Robotics Engineering</h3>
-              <p>Dayananda Sagar University, Bangalore, India</p>
-            </div>
-          </div>
-          <div class="timeline-item reveal reveal-delay-2">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <span class="timeline-date">2021 — 2024</span>
-              <h3>Diploma in Mechanical Engineering</h3>
-              <p>Sir M Visvesvaraya Polytechnic, Hospet, India</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── Research Section (Geometric KD) ─── -->
+    <!-- ─── Research Section ─── -->
     <section class="section" id="research">
       <div class="container">
-        <div class="reveal">
-          <span class="section-label">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" /></svg>
-            Research
-          </span>
-          <h2 class="section-title">Geometric Knowledge Distillation</h2>
-          <p class="section-subtitle">Exploring efficient model compression through geometric representations of neural network knowledge.</p>
+        <div class="section-header">
+          <span class="section-label">Academic Research</span>
+          <h2 class="section-title">Geometric Knowledge Distillation (KD)</h2>
+          <p class="section-desc">Working on neural model compression methods optimized for robotic edge devices.</p>
         </div>
 
-        <div class="research-card reveal">
-          <div class="research-card-content">
-            <div class="research-card-body">
-              <h3>Geometric KD — Research Plan</h3>
-              <p>
-                Knowledge distillation compresses large "teacher" networks into smaller, deployable "student" models.
-                My research explores <strong>geometric approaches</strong> to this problem — leveraging the geometric
-                structure of learned representations (manifold alignment, distance preservation, and topological constraints)
-                to transfer richer knowledge than standard logit-matching or feature-mimicking methods.
-              </p>
-              <p>
-                This work is motivated by the need to deploy large models on resource-constrained devices like
-                Raspberry Pi and mobile robots, where computational budgets are tight but accuracy requirements remain high.
-                The approach investigates how preserving the <em>geometric relationships</em> between data points
-                in the teacher's representation space leads to better student generalization.
-              </p>
-              <div class="research-tags">
-                <span class="project-tag">Knowledge Distillation</span>
-                <span class="project-tag">Model Compression</span>
-                <span class="project-tag">Geometric ML</span>
-                <span class="project-tag">Representation Learning</span>
-                <span class="project-tag">Edge Deployment</span>
-              </div>
-              <a class="btn btn-outline" href="./geometric_kd_plan.pdf" target="_blank" rel="noreferrer" style="margin-top: 20px;">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" /></svg>
-                Read Full Research Plan (PDF)
-              </a>
-            </div>
+        <div class="research-container">
+          <h3 class="research-title">Research Proposal: Geometric Representation Transfer</h3>
+          <div class="research-meta">Dayananda Sagar University · Bangalore, India</div>
+          <div class="research-text">
+            <p>
+              Deep learning models often exceed the memory and compute capacity of edge robotic platforms, such as Raspberry Pi boards or micro-UAV controllers. While standard Knowledge Distillation (KD) transfers logits from a large "teacher" model to a lightweight "student" model, it fails to capture the underlying structural geometry of the representation space.
+            </p>
+            <p>
+              My research proposal focuses on <strong>Geometric Knowledge Distillation</strong>. By introducing manifold alignment, distance-preservation constraints, and topological mapping constraints, the transfer pipeline trains student networks that preserve the structural topology learned by teachers. This leads to higher model compression ratios while retaining high classification and navigation accuracy on low-power devices.
+            </p>
           </div>
+          <div class="research-tags" style="margin-bottom: 24px;">
+            <span class="tag">Model Distillation</span>
+            <span class="tag">Manifold Alignment</span>
+            <span class="tag">Edge AI</span>
+            <span class="tag">Topology Preservation</span>
+            <span class="tag">Robotic Compute</span>
+          </div>
+          <a href="./geometric_kd_plan.pdf" class="btn btn-primary" target="_blank" rel="noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9Z" />
+            </svg>
+            Read Geometric KD PDF Plan
+          </a>
         </div>
       </div>
     </section>
@@ -331,272 +177,567 @@
     <!-- ─── Projects Section ─── -->
     <section class="section" id="projects">
       <div class="container">
-        <div class="reveal">
-          <span class="section-label">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" /></svg>
-            Projects
-          </span>
-          <h2 class="section-title">Things I've built</h2>
-          <p class="section-subtitle">Academic projects and experiments across robotics, ML, and systems.</p>
+        <div class="section-header">
+          <span class="section-label">Engineering Projects</span>
+          <h2 class="section-title">Robotics & Machine Learning Stacks</h2>
+          <p class="section-desc">Applied engineering systems and applications built for simulation and embedded runtimes.</p>
         </div>
 
-        <div class="projects-grid stagger-children">
-          <!-- Project 1: Autonomous Drone -->
-          <div class="project-card reveal" style="--i:0">
-            <div class="project-card-header">
-              <div class="project-icon" style="background: rgba(108,99,255,0.15); color: var(--accent-1);">🛩️</div>
-              <a class="project-link" href="https://github.com/ramcharan377" target="_blank" rel="noreferrer" aria-label="View on GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
-              </a>
-            </div>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-icon">🛩️</div>
             <h3>Autonomous Agricultural Drone</h3>
-            <p>Multi-node ROS 2 autonomous drone stack with SLAM Toolbox, Nav2, sensor fusion, and custom communication for autonomous control in Gazebo simulation.</p>
-            <div class="project-tags">
-              <span class="project-tag">ROS 2</span>
-              <span class="project-tag">SLAM</span>
-              <span class="project-tag">Nav2</span>
-              <span class="project-tag">Gazebo</span>
+            <p>Built an autonomous quadcopter simulation in Gazebo environment utilizing ROS 2. Built nodes for sensor fusion, LIDAR depth maps, SLAM Toolbox mapping, and Nav2 waypoint navigation for field coverage tasks.</p>
+            <div class="tags">
+              <span class="tag">ROS 2</span>
+              <span class="tag">Gazebo</span>
+              <span class="tag">Nav2</span>
+              <span class="tag">SLAM</span>
             </div>
+            <a href="https://github.com/ramcharan377" class="project-link-btn" target="_blank" rel="noreferrer">
+              View Repository Code &rarr;
+            </a>
           </div>
 
-          <!-- Project 2: Transformer Lab -->
-          <div class="project-card reveal" style="--i:1">
-            <div class="project-card-header">
-              <div class="project-icon" style="background: rgba(0,212,170,0.15); color: var(--accent-2);">📝</div>
-              <a class="project-link" href="https://github.com/ramcharan377/transformer-text-generation-lab" target="_blank" rel="noreferrer" aria-label="View on GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
-              </a>
-            </div>
-            <h3>Transformer & LLM Engineering Lab</h3>
-            <p>Four hands-on notebooks dissecting LLMs: GPT-2 inference, sliding-window long-form generation with nucleus sampling, a custom PyTorch N-gram language model from scratch, and raw self-attention implemented in NumPy.</p>
-            <div class="project-tags">
-              <span class="project-tag">GPT-2</span>
-              <span class="project-tag">PyTorch</span>
-              <span class="project-tag">NumPy</span>
-              <span class="project-tag">HuggingFace</span>
-            </div>
-          </div>
-
-          <!-- Project 3: Quantum ML -->
-          <div class="project-card reveal" style="--i:2">
-            <div class="project-card-header">
-              <div class="project-icon" style="background: rgba(255,107,157,0.15); color: var(--accent-3);">⚛️</div>
-              <a class="project-link" href="https://github.com/ramcharan377" target="_blank" rel="noreferrer" aria-label="View on GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
-              </a>
-            </div>
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-icon">⚛️</div>
             <h3>Quantum-Enhanced ML</h3>
-            <p>Hybrid quantum-classical machine learning pipeline for disease detection, leveraging Qiskit and PennyLane quantum circuits with classical Scikit-learn models.</p>
-            <div class="project-tags">
-              <span class="project-tag">Qiskit</span>
-              <span class="project-tag">PennyLane</span>
-              <span class="project-tag">Scikit-learn</span>
+            <p>Developed a hybrid classical-quantum machine learning classifier for disease detection. Programmed quantum variational classifiers using PennyLane and Qiskit APIs, comparing performance directly against standard classical models.</p>
+            <div class="tags">
+              <span class="tag">Qiskit</span>
+              <span class="tag">PennyLane</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">Python</span>
             </div>
+            <a href="https://github.com/ramcharan377" class="project-link-btn" target="_blank" rel="noreferrer">
+              View Repository Code &rarr;
+            </a>
           </div>
 
-          <!-- Project 4: Low-Resource LLMs -->
-          <div class="project-card reveal" style="--i:3">
-            <div class="project-card-header">
-              <div class="project-icon" style="background: rgba(255,193,68,0.15); color: #ffc144;">🗣️</div>
-              <a class="project-link" href="https://github.com/ramcharan377" target="_blank" rel="noreferrer" aria-label="View on GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
-              </a>
-            </div>
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-icon">🇮🇳</div>
             <h3>Low-Resource LLMs for Indian Languages</h3>
-            <p>Fine-tuning workflows for Indian languages using HuggingFace Transformers, LoRA adapters, and custom tokenization strategies for low-resource settings.</p>
-            <div class="project-tags">
-              <span class="project-tag">HuggingFace</span>
-              <span class="project-tag">LoRA</span>
-              <span class="project-tag">NLP</span>
-              <span class="project-tag">Tokenization</span>
+            <p>Researched parameter-efficient fine-tuning (PEFT) configurations for low-resource Indian languages. Created fine-tuning notebooks utilizing Hugging Face Transformers, LoRA, and QLoRA on local GPUs.</p>
+            <div class="tags">
+              <span class="tag">HuggingFace</span>
+              <span class="tag">LoRA</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Adapters</span>
             </div>
-          </div>
-
-          <!-- Project 5: RL Agents -->
-          <div class="project-card reveal" style="--i:4">
-            <div class="project-card-header">
-              <div class="project-icon" style="background: rgba(0,188,212,0.15); color: #4dd0e1;">🎮</div>
-              <a class="project-link" href="https://github.com/ramcharan377/Reinforcement-Learning-" target="_blank" rel="noreferrer" aria-label="View on GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
-              </a>
-            </div>
-            <h3>Reinforcement Learning Agents</h3>
-            <p>9 RL agents trained across Gymnasium environments: Q-Learning on FrozenLake & Taxi, REINFORCE on LunarLander, DQN on Breakout, and Actor-Critic on BipedalWalker. Each agent recorded frame-by-frame.</p>
-            <div class="project-tags">
-              <span class="project-tag">Q-Learning</span>
-              <span class="project-tag">DQN</span>
-              <span class="project-tag">REINFORCE</span>
-              <span class="project-tag">Actor-Critic</span>
-            </div>
-          </div>
-
-          <!-- Project 6: GamePlay Agents -->
-          <div class="project-card reveal" style="--i:5">
-            <div class="project-card-header">
-              <div class="project-icon" style="background: rgba(156,39,176,0.15); color: #ba68c8;">🕹️</div>
-              <a class="project-link" href="https://github.com/ramcharan377/GamePlay-Agents-master" target="_blank" rel="noreferrer" aria-label="View on GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
-              </a>
-            </div>
-            <h3>GamePlay Agents</h3>
-            <p>RL agents for classic control, grid-world, Box2D and Atari environments built with Gymnasium, PyTorch and Stable-Baselines3. Every agent trained and recorded with real gameplay GIFs.</p>
-            <div class="project-tags">
-              <span class="project-tag">Gymnasium</span>
-              <span class="project-tag">Stable-Baselines3</span>
-              <span class="project-tag">PyTorch</span>
-            </div>
+            <a href="https://github.com/ramcharan377" class="project-link-btn" target="_blank" rel="noreferrer">
+              View Repository Code &rarr;
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ─── Experiments & Results Section (GIF Gallery) ─── -->
+    <!-- ─── Experiments Section ─── -->
     <section class="section" id="experiments">
       <div class="container">
-        <div class="reveal">
-          <span class="section-label">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605" /></svg>
-            Experiments & Results
-          </span>
-          <h2 class="section-title">Trained agents in action</h2>
-          <p class="section-subtitle">Real gameplay recordings of RL agents trained across different environments. Click any to view full-size.</p>
+        <div class="section-header">
+          <span class="section-label">Experiments & Results</span>
+          <h2 class="section-title">Algorithms & Model Teardowns</h2>
+          <p class="section-desc">Detailed logs, parameters, and outputs from GitHub repositories. Click images to expand.</p>
         </div>
 
-        <div class="experiments-grid stagger-children">
-          <div class="experiment-card reveal" style="--i:0">
-            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/cartpole_random_agent.gif" alt="CartPole — Random Agent" loading="lazy" />
-            <div class="experiment-info">
-              <h4>CartPole</h4>
-              <p>Random Agent · Environment Exploration</p>
+        <div class="tabs-container">
+          <button class="tab-btn active" data-tab="rl-panel">Reinforcement Learning (9 Environments)</button>
+          <button class="tab-btn" data-tab="nlp-panel">Transformer & LLM Engineering (4 Notebooks)</button>
+        </div>
+
+        <!-- Tab Panel 1: Reinforcement Learning -->
+        <div class="tab-panel active" id="rl-panel">
+          <div class="rl-experiments-list">
+            
+            <!-- RL 04 -->
+            <div class="rl-card">
+              <div class="rl-gif-wrapper">
+                <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/frozenlake_qlearning_greedy.gif" alt="FrozenLake Q-Learning Agent" />
+              </div>
+              <div class="rl-content">
+                <div class="rl-header">
+                  <h3>FrozenLake-v1 (Slippery)</h3>
+                  <span class="rl-algo-badge">Tabular Q-Learning</span>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 12px;">
+                  The agent must navigate a grid-world from start to goal while walking on slippery ice patches that introduce stochastic state transitions.
+                </p>
+                <div class="rl-details">
+                  <div class="rl-detail-item">
+                    <div class="rl-detail-label">Hyperparameters</div>
+                    <div class="rl-detail-value">
+                      Learning rate α = 0.8<br />
+                      Discount factor γ = 0.95<br />
+                      Epsilon ε = 1.0 to 0.01 decay
+                    </div>
+                  </div>
+                  <div class="rl-detail-item">
+                    <div class="rl-detail-label">Experiment Results</div>
+                    <div class="rl-detail-value">
+                      Successfully converges to the optimal safe path. Tabular Q-values account for slippery transitions to avoid holes.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RL 05 -->
+            <div class="rl-card">
+              <div class="rl-gif-wrapper">
+                <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/taxi_qlearning_greedy.gif" alt="Taxi Passenger Pick-up Agent" />
+              </div>
+              <div class="rl-content">
+                <div class="rl-header">
+                  <h3>Taxi-v4 Environment</h3>
+                  <span class="rl-algo-badge">SARSA vs Q-Learning</span>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 12px;">
+                  Grid-world navigation task requiring the agent to pick up passengers from a random start node and drop them off at designated target colors.
+                </p>
+                <div class="rl-details">
+                  <div class="rl-detail-item">
+                    <div class="rl-detail-label">Hyperparameters</div>
+                    <div class="rl-detail-value">
+                      Episodes: 2000<br />
+                      Epsilon ε = 0.1 constant<br />
+                      Learning rate α = 0.4
+                    </div>
+                  </div>
+                  <div class="rl-detail-item">
+                    <div class="rl-detail-label">Experiment Results</div>
+                    <div class="rl-detail-value">
+                      Both algorithms converged from -700 penalty to +8 reward. Tabular Q-Learning converged ~15% faster than SARSA.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RL 06 -->
+            <div class="rl-card">
+              <div class="rl-gif-wrapper">
+                <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/lunarlander_reinforce.gif" alt="LunarLander Landing Agent" />
+              </div>
+              <div class="rl-content">
+                <div class="rl-header">
+                  <h3>LunarLander-v2 Physics</h3>
+                  <span class="rl-algo-badge">REINFORCE with Baseline</span>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 12px;">
+                  Lunar lander module must execute continuous engine thrust control to balance gravity and land safely between two flags.
+                </p>
+                <div class="rl-details">
+                  <div class="rl-detail-item">
+                    <div class="rl-detail-label">Hyperparameters</div>
+                    <div class="rl-detail-value">
+                      Discount factor γ = 0.99<br />
+                      Adam Optimizer LR = 1e-3<br />
+                      Baseline network parameter tracking
+                    </div>
+                  </div>
+                  <div class="rl-detail-item">
+                    <div class="rl-detail-label">Experiment Results</div>
+                    <div class="rl-detail-value">
+                      Achieved +200 average reward over 100 consecutive episodes, satisfying Gym's safe landing condition.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RL 07 -->
+            <div class="rl-card">
+              <div class="rl-gif-wrapper">
+                <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/breakout_dqn.gif" alt="Atari Breakout DQN Agent" />
+              </div>
+              <div class="rl-content">
+                <div class="rl-header">
+                  <h3>Atari Breakout-v4</h3>
+                  <span class="rl-algo-badge">Deep Q-Network (DQN)</span>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 12px;">
+                  High-dimensional pixel-level control. The neural network maps stack frames of visual input to discrete paddle movement actions.
+                </p>
+                <div class="rl-details">
+                  <div class="rl-detail-item">
+                    <div class="rl-detail-label">Hyperparameters</div>
+                    <div class="rl-detail-value">
+                      Frame stack: 4 frames<br />
+                      Replay Buffer size: 100,000<br />
+                      Target update frequency: 1000 steps
+                    </div>
+                  </div>
+                  <div class="rl-detail-item">
+                    <div class="rl-detail-label">Experiment Results</div>
+                    <div class="rl-detail-value">
+                      Agent successfully learned to target and tunnel through the corners of the brick wall to maximize score efficiency.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RL 09 -->
+            <div class="rl-card">
+              <div class="rl-gif-wrapper">
+                <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/actorcritic_walker.gif" alt="BipedalWalker Walking Agent" />
+              </div>
+              <div class="rl-content">
+                <div class="rl-header">
+                  <h3>BipedalWalker-v3</h3>
+                  <span class="rl-algo-badge">Advantage Actor-Critic (A2C)</span>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 12px;">
+                  Highly non-linear continuous action controls. Bipedal walker robot must learn coordinate hip and knee angles to walk over rough terrain.
+                </p>
+                <div class="rl-details">
+                  <div class="rl-detail-item">
+                    <div class="rl-detail-label">Hyperparameters</div>
+                    <div class="rl-detail-value">
+                      Continuous range [-1.0, 1.0]<br />
+                      Entropy coefficient: 0.01<br />
+                      Gamma γ = 0.99
+                    </div>
+                  </div>
+                  <div class="rl-detail-item">
+                    <div class="rl-detail-label">Experiment Results</div>
+                    <div class="rl-detail-value">
+                      Agent learned stable gait structures, knee-lift balance routines, and avoided leg buckling over irregular surfaces.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RL 08 -->
+            <div class="rl-card">
+              <div class="rl-gif-wrapper">
+                <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/bandit_ad_selection.gif" alt="Multi-Armed Bandit Agent" />
+              </div>
+              <div class="rl-content">
+                <div class="rl-header">
+                  <h3>Multi-Armed Bandit</h3>
+                  <span class="rl-algo-badge">Epsilon-Greedy vs UCB</span>
+                </div>
+                <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 12px;">
+                  Balancing exploration and exploitation parameters. Model learns optimal Click-Through-Rate (CTR) distribution across simulated ads.
+                </p>
+                <div class="rl-details">
+                  <div class="rl-detail-item">
+                    <div class="rl-detail-label">Hyperparameters</div>
+                    <div class="rl-detail-value">
+                      Arms: 10<br />
+                      UCB parameter c = 2.0<br />
+                      Iterations: 10,000 steps
+                    </div>
+                  </div>
+                  <div class="rl-detail-item">
+                    <div class="rl-detail-label">Experiment Results</div>
+                    <div class="rl-detail-value">
+                      Upper Confidence Bound (UCB) outperformed Epsilon-Greedy, achieving significantly lower cumulative regret over time.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RL 01-03 Grid (Random exploration benchmarks) -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 16px;">
+              <div class="rl-card" style="grid-template-columns: 1fr;">
+                <div class="rl-gif-wrapper" style="height: 140px;">
+                  <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/cartpole_random_agent.gif" alt="CartPole Physics" />
+                </div>
+                <div class="rl-content" style="padding: 16px;">
+                  <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 6px;">01. CartPole-v1 Benchmark</h4>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary);">Random exploration agent baseline used to benchmark step latency and environment setup.</p>
+                </div>
+              </div>
+              <div class="rl-card" style="grid-template-columns: 1fr;">
+                <div class="rl-gif-wrapper" style="height: 140px;">
+                  <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/mountaincar_random_agent.gif" alt="MountainCar Physics" />
+                </div>
+                <div class="rl-content" style="padding: 16px;">
+                  <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 6px;">02. MountainCar-v0 Benchmark</h4>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary);">Exploring gravity boundaries and continuous physics limits via a random agent trajectory.</p>
+                </div>
+              </div>
+              <div class="rl-card" style="grid-template-columns: 1fr;">
+                <div class="rl-gif-wrapper" style="height: 140px;">
+                  <img class="rl-gif" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/acrobot_random_agent.gif" alt="Acrobot Physics" />
+                </div>
+                <div class="rl-content" style="padding: 16px;">
+                  <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 6px;">03. Acrobot-v1 Benchmark</h4>
+                  <p style="font-size: 0.8rem; color: var(--text-secondary);">Double-pendulum control environment exploring angle and velocity state distributions.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tab Panel 2: NLP / Transformers -->
+        <div class="tab-panel" id="nlp-panel">
+          <div class="nlp-experiments-grid">
+            
+            <!-- NLP 01 -->
+            <div class="nlp-card">
+              <h3>01_gpt2_text_generation.ipynb <a href="https://github.com/ramcharan377/transformer-text-generation-lab" target="_blank" rel="noreferrer" style="font-size: 0.8rem;">View Notebook &rarr;</a></h3>
+              <p class="nlp-card-desc">Running inference using Hugging Face pipelines with GPT-2 pre-trained model weights.</p>
+              
+              <div class="nlp-grid-details">
+                <div class="nlp-detail-section">
+                  <h4>Mechanism</h4>
+                  <p>Initializes a deterministic seed environment to guarantee identical autoregressive outputs. The generation token pipeline is capped via maximum token boundary values.</p>
+                </div>
+                <div class="nlp-detail-section">
+                  <h4>Key Parameters</h4>
+                  <p>
+                    <code>max_length = 50</code><br />
+                    <code>num_return_sequences = 3</code><br />
+                    <code>set_seed(42)</code>
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Sample Prompt & Output</h4>
+                <div class="nlp-code-sample"><strong>Input Prompt:</strong> "In a shocking turn of events, a herd of unicorns has been discovered living..."
+<strong>Output Sample:</strong> "...in a remote, previously unexplored valley, in the Andes Mountains. Even more surprising to the researchers was the fact that the unicorns spoke fairly perfect, accented English..."</div>
+              </div>
+            </div>
+
+            <!-- NLP 02 -->
+            <div class="nlp-card">
+              <h3>02_iterative_long_story_generation.ipynb <a href="https://github.com/ramcharan377/transformer-text-generation-lab" target="_blank" rel="noreferrer" style="font-size: 0.8rem;">View Notebook &rarr;</a></h3>
+              <p class="nlp-card-desc">Working around hard context limits (1024 tokens in GPT-2) using an iterative sliding context window.</p>
+              
+              <div class="nlp-grid-details">
+                <div class="nlp-detail-section">
+                  <h4>Mechanism</h4>
+                  <p>Chains model generation calls in a loop. In each loop, it extracts the last 150-200 generated tokens and feeds them back as the prompt context. Uses top-k and nucleus (top-p) sampling, and prevents repetition collapses.</p>
+                </div>
+                <div class="nlp-detail-section">
+                  <h4>Key Parameters</h4>
+                  <p>
+                    Sliding window: <code>150 - 200 tokens</code><br />
+                    Repetition limit: <code>no_repeat_ngram_size = 3</code><br />
+                    Sampling: <code>top_k = 50</code>, <code>top_p = 0.9</code>
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Story Progression Log</h4>
+                <div class="nlp-code-sample"><strong>Step 1:</strong> Initial context generates paragraph 1 (tokens 0 - 200).
+<strong>Step 2:</strong> Slice tokens 50-200. Feed as prompt to generate paragraph 2 (tokens 200 - 400).
+<strong>Step 3:</strong> Repeat process. The model successfully generates a cohesive 1200+ word story without falling into repeating loops.</div>
+              </div>
+            </div>
+
+            <!-- NLP 03 -->
+            <div class="nlp-card">
+              <h3>03_pytorch_simple_llm.ipynb <a href="https://github.com/ramcharan377/transformer-text-generation-lab" target="_blank" rel="noreferrer" style="font-size: 0.8rem;">View Notebook &rarr;</a></h3>
+              <p class="nlp-card-desc">Building a simple N-gram language model from scratch in PyTorch without using pre-built library layers.</p>
+              
+              <div class="nlp-grid-details">
+                <div class="nlp-detail-section">
+                  <h4>Mechanism</h4>
+                  <p>Maps a plain text corpus into a vocabulary index dictionary. Optimizes an embedding weights matrix directly against the training text sequence using Cross-Entropy Loss optimization.</p>
+                </div>
+                <div class="nlp-detail-section">
+                  <h4>Architecture Details</h4>
+                  <p>
+                    Inputs: word tokens translated to indices<br />
+                    Loss function: PyTorch <code>nn.CrossEntropyLoss</code><br />
+                    Prediction: Autoregressive next-token index distribution
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">Model Class Definition Snippet</h4>
+                <div class="nlp-code-sample">class SimpleNGramLM(nn.Module):
+    def __init__(self, vocab_size, embedding_dim):
+        super().__init__()
+        self.embeddings = nn.Embedding(vocab_size, embedding_dim)
+        self.linear = nn.Linear(embedding_dim, vocab_size)
+        
+    def forward(self, inputs):
+        embeds = self.embeddings(inputs)
+        out = self.linear(embeds)
+        return out</div>
+              </div>
+            </div>
+
+            <!-- NLP 04 -->
+            <div class="nlp-card">
+              <h3>04_numpy_self_attention.ipynb <a href="https://github.com/ramcharan377/transformer-text-generation-lab" target="_blank" rel="noreferrer" style="font-size: 0.8rem;">View Notebook &rarr;</a></h3>
+              <p class="nlp-card-desc">Implementing the mathematical operations of scaled dot-product attention in pure NumPy.</p>
+              
+              <div class="nlp-grid-details">
+                <div class="nlp-detail-section">
+                  <h4>Mechanism</h4>
+                  <p>Implements linear projections for Query, Key, and Value matrices. Performs matrix dot-product scaling, softmax scaling along columns, and multiplies by the Value matrix to compute self-attention.</p>
+                </div>
+                <div class="nlp-detail-section">
+                  <h4>Formula Implemented</h4>
+                  <p>
+                    <code>Attention(Q, K, V) = softmax(Q @ K.T / sqrt(d_k)) @ V</code>
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 8px;">NumPy Calculation Code</h4>
+                <div class="nlp-code-sample">import numpy as np
+
+def self_attention(Q, K, V):
+    d_k = Q.shape[-1]
+    scores = np.matmul(Q, K.T) / np.sqrt(d_k)
+    # Softmax along columns
+    weights = np.exp(scores) / np.sum(np.exp(scores), axis=-1, keepdims=True)
+    output = np.matmul(weights, V)
+    return output, weights</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── Education & Skills Section ─── -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="edu-skills-layout">
+          
+          <!-- Education Column -->
+          <div>
+            <div class="section-header" style="margin-bottom: 24px;">
+              <span class="section-label">Academic Path</span>
+              <h2 class="section-title" style="font-size: 1.5rem;">Education Timeline</h2>
+            </div>
+            
+            <div class="edu-timeline">
+              <div class="edu-item">
+                <div class="edu-date">2024 — Present</div>
+                <h3>Dayananda Sagar University</h3>
+                <p>B.Tech. in Artificial Intelligence & Robotics Engineering</p>
+                <p style="font-size: 0.82rem; color: var(--text-muted);">Bangalore, India</p>
+              </div>
+              <div class="edu-item">
+                <div class="edu-date">2021 — 2024</div>
+                <h3>Sir M Visvesvaraya Polytechnic</h3>
+                <p>Diploma in Mechanical Engineering</p>
+                <p style="font-size: 0.82rem; color: var(--text-muted);">Hospet, India</p>
+              </div>
             </div>
           </div>
 
-          <div class="experiment-card reveal" style="--i:1">
-            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/frozenlake_qlearning_greedy.gif" alt="FrozenLake — Q-Learning" loading="lazy" />
-            <div class="experiment-info">
-              <h4>FrozenLake</h4>
-              <p>Tabular Q-Learning · Learns to cross the lake</p>
+          <!-- Skills Column -->
+          <div>
+            <div class="section-header" style="margin-bottom: 24px;">
+              <span class="section-label">Capabilities</span>
+              <h2 class="section-title" style="font-size: 1.5rem;">Skills & Tooling</h2>
+            </div>
+            
+            <div class="skills-list">
+              <div class="skills-category">
+                <h3>Robotics & Autonomy</h3>
+                <div class="tags">
+                  <span class="tag">ROS 2</span>
+                  <span class="tag">Nav2</span>
+                  <span class="tag">SLAM Toolbox</span>
+                  <span class="tag">Gazebo Simulator</span>
+                  <span class="tag">MoveIt</span>
+                  <span class="tag">Sensor Fusion</span>
+                </div>
+              </div>
+
+              <div class="skills-category">
+                <h3>Machine Learning / Deep Learning</h3>
+                <div class="tags">
+                  <span class="tag">PyTorch</span>
+                  <span class="tag">TensorFlow</span>
+                  <span class="tag">Gymnasium</span>
+                  <span class="tag">Stable-Baselines3</span>
+                  <span class="tag">Qiskit (Quantum ML)</span>
+                  <span class="tag">Scikit-learn</span>
+                </div>
+              </div>
+
+              <div class="skills-category">
+                <h3>Languages & Platforms</h3>
+                <div class="tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">C++</span>
+                  <span class="tag">Bash Scripting</span>
+                  <span class="tag">Linux</span>
+                  <span class="tag">Docker</span>
+                  <span class="tag">Raspberry Pi</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="experiment-card reveal" style="--i:2">
-            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/taxi_qlearning_greedy.gif" alt="Taxi — Q-Learning" loading="lazy" />
-            <div class="experiment-info">
-              <h4>Taxi</h4>
-              <p>SARSA vs Q-Learning · Converges from −700 to +8</p>
-            </div>
-          </div>
-
-          <div class="experiment-card reveal" style="--i:3">
-            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/lunarlander_reinforce.gif" alt="LunarLander — REINFORCE" loading="lazy" />
-            <div class="experiment-info">
-              <h4>LunarLander</h4>
-              <p>REINFORCE + Baseline · Policy Gradient</p>
-            </div>
-          </div>
-
-          <div class="experiment-card reveal" style="--i:4">
-            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/breakout_dqn.gif" alt="Breakout — DQN" loading="lazy" />
-            <div class="experiment-info">
-              <h4>Breakout (Atari)</h4>
-              <p>Deep Q-Network · Frame-stacking</p>
-            </div>
-          </div>
-
-          <div class="experiment-card reveal" style="--i:5">
-            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/actorcritic_walker.gif" alt="BipedalWalker — Actor-Critic" loading="lazy" />
-            <div class="experiment-info">
-              <h4>BipedalWalker</h4>
-              <p>Actor-Critic · Continuous control</p>
-            </div>
-          </div>
-
-          <div class="experiment-card reveal" style="--i:6">
-            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/mountaincar_random_agent.gif" alt="MountainCar — Random Agent" loading="lazy" />
-            <div class="experiment-info">
-              <h4>MountainCar</h4>
-              <p>Random Agent · Classic Control</p>
-            </div>
-          </div>
-
-          <div class="experiment-card reveal" style="--i:7">
-            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/acrobot_random_agent.gif" alt="Acrobot — Random Agent" loading="lazy" />
-            <div class="experiment-info">
-              <h4>Acrobot</h4>
-              <p>Random Agent · Environment Exploration</p>
-            </div>
-          </div>
-
-          <div class="experiment-card reveal" style="--i:8">
-            <img class="gif-thumb" src="https://raw.githubusercontent.com/ramcharan377/Reinforcement-Learning-/main/notebooks/videos/bandit_ad_selection.gif" alt="Multi-Armed Bandit — Ad Selection" loading="lazy" />
-            <div class="experiment-info">
-              <h4>Multi-Armed Bandit</h4>
-              <p>Exploration Strategies · Ad CTR Optimization</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
     <!-- ─── Contact Section ─── -->
-    <section class="section" id="contact">
+    <section class="section" id="contact" style="border-bottom: none;">
       <div class="container">
-        <div class="reveal">
-          <span class="section-label">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
-            Contact
-          </span>
-          <h2 class="section-title">Let's connect</h2>
-          <p class="section-subtitle">Open to research collaborations, robotics projects, and AI/ML opportunities.</p>
+        <div class="section-header">
+          <span class="section-label">Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-desc">Open to academic collaborations, research discussions, and internship roles.</p>
         </div>
 
-        <div class="contact-content">
+        <div class="contact-layout">
           <div class="contact-text">
-            <p class="reveal">
-              I'm always interested in connecting with fellow researchers, students, and professionals
-              working in robotics, machine learning, and AI. Whether it's a collaboration, an opportunity,
-              or just a conversation — feel free to reach out.
+            <p>
+              Whether you are working on robotic autonomy, reinforcement learning applications, or geometric knowledge distillation frameworks, feel free to reach out. I am happy to discuss collaborations or share project details.
+            </p>
+            <p>
+              Located in Bangalore, India.
             </p>
           </div>
 
-          <div class="contact-links">
-            <a class="contact-card reveal" href="mailto:ramcharanathyam2006@gmail.com" id="contact-email">
-              <div class="contact-card-icon" style="background: rgba(108,99,255,0.15); color: var(--accent-1);">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
-              </div>
+          <div class="contact-links-grid">
+            <a href="mailto:ramcharanathyam2006@gmail.com" class="contact-card-link">
+              <div class="contact-card-icon">✉️</div>
               <div class="contact-card-info">
                 <h3>Email</h3>
-                <p>ramcharanathyam2006@gmail.com</p>
+                <p>ramcharanathyam2006...</p>
               </div>
             </a>
 
-            <a class="contact-card reveal reveal-delay-1" href="https://github.com/ramcharan377" target="_blank" rel="noreferrer" id="contact-github">
-              <div class="contact-card-icon" style="background: rgba(0,212,170,0.15); color: var(--accent-2);">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              </div>
+            <a href="https://github.com/ramcharan377" class="contact-card-link" target="_blank" rel="noreferrer">
+              <div class="contact-card-icon">💻</div>
               <div class="contact-card-info">
                 <h3>GitHub</h3>
-                <p>github.com/ramcharan377</p>
+                <p>ramcharan377</p>
               </div>
             </a>
 
-            <a class="contact-card reveal reveal-delay-2" href="https://linkedin.com/in/athyam-ramcharan" target="_blank" rel="noreferrer" id="contact-linkedin">
-              <div class="contact-card-icon" style="background: rgba(255,107,157,0.15); color: var(--accent-3);">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              </div>
+            <a href="https://linkedin.com/in/athyam-ramcharan" class="contact-card-link" target="_blank" rel="noreferrer">
+              <div class="contact-card-icon">🔗</div>
               <div class="contact-card-info">
                 <h3>LinkedIn</h3>
-                <p>Athyam Ramcharan</p>
+                <p>athyam-ramcharan</p>
               </div>
             </a>
 
-            <a class="contact-card reveal reveal-delay-3" href="./ramcharan_resume_updated.pdf" target="_blank" rel="noreferrer" id="contact-cv">
-              <div class="contact-card-icon" style="background: rgba(255,193,68,0.15); color: #ffc144;">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" /></svg>
-              </div>
+            <a href="./ramcharan_resume_updated.pdf" class="contact-card-link" target="_blank" rel="noreferrer">
+              <div class="contact-card-icon">📄</div>
               <div class="contact-card-info">
-                <h3>Resume / CV</h3>
-                <p>Download my latest CV</p>
+                <h3>Resume</h3>
+                <p>Download PDF</p>
               </div>
             </a>
           </div>
@@ -608,19 +749,8 @@
     <footer class="footer">
       <div class="container">
         <p class="footer-text">
-          © 2024 <span class="gradient-text">Athyam Ramcharan</span>. Built with care.
+          &copy; 2026 Athyam Ramcharan. All rights reserved. Professional Portfolio.
         </p>
-        <div class="footer-links">
-          <a href="https://github.com/ramcharan377" target="_blank" rel="noreferrer" aria-label="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          </a>
-          <a href="https://linkedin.com/in/athyam-ramcharan" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <a href="mailto:ramcharanathyam2006@gmail.com" aria-label="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
-          </a>
-        </div>
       </div>
     </footer>
 
