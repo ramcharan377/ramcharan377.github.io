@@ -20,12 +20,9 @@
     <header class="topbar">
       <a class="brand" href="#home">Athyam Ramcharan</a>
       <nav class="nav">
-        <a href="#summary">Overview</a>
+        <a href="#overview">Overview</a>
         <a href="#education">Education</a>
         <a href="#research">Research</a>
-        <a href="#lab-facilities">Labs</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Methods</a>
         <a href="./ramcharan_resume_updated.pdf" target="_blank" rel="noreferrer">CV</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -33,212 +30,68 @@
 
     <main id="home" class="shell">
       <section class="hero">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Academic Profile</p>
-          <h1>AI and robotics student focused on autonomous systems and applied research.</h1>
-          <p class="lede">
-            Athyam Ramcharan is an AI and Robotics Engineering student based in Bangalore. His work centers on ROS 2,
-            autonomous systems, sensor fusion, computer vision, and low-resource machine learning.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#research">Research focus</a>
-            <a class="button button-secondary" href="./ramcharan_resume_updated.pdf" target="_blank" rel="noreferrer">CV</a>
-            <a class="button button-secondary" href="#contact">Contact</a>
-          </div>
-        </div>
-
-        <aside class="hero-card reveal delay-1" aria-label="Highlights">
-          <div class="stat">
-            <span class="stat-value">Research</span>
-            <span class="stat-label">autonomous systems, robotics software, applied AI</span>
-          </div>
-          <div class="stat">
-            <span class="stat-value">Focus</span>
-            <span class="stat-label">ROS 2, SLAM, sensor fusion, computer vision</span>
-          </div>
-          <div class="stat">
-            <span class="stat-value">Location</span>
-            <span class="stat-label">Dayananda Sagar University, Bangalore, India</span>
-          </div>
-        </aside>
-      </section>
-
-      <section id="summary" class="panel reveal">
-        <div class="panel-heading">
-          <p class="eyebrow">Overview</p>
-          <h2>Research-oriented work in robotics, machine learning, and embedded systems.</h2>
-        </div>
-        <div class="panel-grid">
-          <p>
-            My work centers on ROS 2-based autonomous systems, combining SLAM, sensor fusion, planning, and embedded
-            deployment. Recent work includes a multi-node autonomous drone stack, real-time pose estimation, and
-            hardware bring-up on Raspberry Pi and FPGA.
-          </p>
-          <p>
-            I also work on machine learning and computer vision projects, including low-resource LLMs for Indian
-            languages and quantum-enhanced ML experiments for disease detection.
-          </p>
+        <p class="eyebrow">Academic Profile</p>
+        <h1>AI and robotics student focused on research and autonomous systems.</h1>
+        <p class="lede">
+          Athyam Ramcharan is an AI and Robotics Engineering student in Bangalore. His work focuses on ROS 2,
+          autonomous systems, sensor fusion, computer vision, and low-resource machine learning.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="./ramcharan_resume_updated.pdf" target="_blank" rel="noreferrer">View CV</a>
+          <a class="button button-secondary" href="#contact">Contact</a>
         </div>
       </section>
 
-      <section id="education" class="section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Education</p>
-          <h2>Formal training in AI, robotics, and mechanical systems.</h2>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <span class="timeline-period">2024 - Present</span>
-            <h3>B.Tech. in Artificial Intelligence and Robotics Engineering</h3>
+      <section id="overview" class="section">
+        <p class="eyebrow">Overview</p>
+        <p>
+          My work centers on ROS 2-based autonomous systems, combining SLAM, sensor fusion, planning, and embedded
+          deployment. Recent work includes a multi-node autonomous drone stack, real-time pose estimation, and
+          hardware bring-up on Raspberry Pi and FPGA. DSU's AI & Robotics labs support this work across robotics,
+          machine learning, GenAI, ADAS, and robotic vision.
+        </p>
+      </section>
+
+      <section id="education" class="section">
+        <p class="eyebrow">Education</p>
+        <div class="items">
+          <div class="item">
+            <span class="item-meta">2024 - Present</span>
+            <h2>B.Tech. in Artificial Intelligence and Robotics Engineering</h2>
             <p>Dayananda Sagar University, Bangalore, India</p>
-          </article>
-          <article class="timeline-item">
-            <span class="timeline-period">2021 - 2024</span>
-            <h3>Diploma in Mechanical Engineering</h3>
+          </div>
+          <div class="item">
+            <span class="item-meta">2021 - 2024</span>
+            <h2>Diploma in Mechanical Engineering</h2>
             <p>Sir M Visvesvaraya Polytechnic, Hospet, India</p>
-          </article>
+          </div>
         </div>
       </section>
 
-      <section id="projects" class="section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Research Projects</p>
-          <h2>Selected academic and applied research work.</h2>
-        </div>
-        <div class="card-grid">
-          <article class="feature-card">
-            <span class="card-index">01</span>
-            <h3>Autonomous Agricultural Drone</h3>
-            <p>
-              Built a multi-node ROS 2 system with sensor fusion, SLAM Toolbox, Nav2, and custom topic/service
-              communication for autonomous control in Gazebo.
-            </p>
-          </article>
-          <article class="feature-card">
-            <span class="card-index">02</span>
-            <h3>Quantum-Enhanced ML</h3>
-            <p>
-              Developed a hybrid quantum-classical pipeline for disease detection using Qiskit, PennyLane, and
-              Scikit-learn, with cloud quantum benchmarking.
-            </p>
-          </article>
-          <article class="feature-card">
-            <span class="card-index">03</span>
-            <h3>Low-Resource LLMs</h3>
-            <p>
-              Fine-tuned small and large language models for Indian languages using HuggingFace, LoRA, adapters, and
-              custom tokenization pipelines.
-            </p>
-          </article>
+      <section id="research" class="section">
+        <p class="eyebrow">Research</p>
+        <div class="items">
+          <div class="item">
+            <h2>Autonomous agricultural drone</h2>
+            <p>ROS 2, SLAM Toolbox, Nav2, sensor fusion, and custom communication for autonomous control in Gazebo.</p>
+          </div>
+          <div class="item">
+            <h2>Quantum-enhanced ML</h2>
+            <p>Hybrid quantum-classical pipeline for disease detection using Qiskit, PennyLane, and Scikit-learn.</p>
+          </div>
+          <div class="item">
+            <h2>Low-resource LLMs</h2>
+            <p>Fine-tuning workflows for Indian languages using HuggingFace, LoRA, adapters, and custom tokenization.</p>
+          </div>
         </div>
       </section>
 
-      <section id="research" class="section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Research Interests</p>
-          <h2>Topics that guide the current academic direction.</h2>
-        </div>
-        <div class="skill-groups">
-          <article class="skill-group">
-            <h3>Autonomy</h3>
-            <div class="chip-list">
-              <span>ROS 2</span>
-              <span>SLAM</span>
-              <span>Sensor Fusion</span>
-              <span>Navigation</span>
-            </div>
-          </article>
-          <article class="skill-group">
-            <h3>Learning Systems</h3>
-            <div class="chip-list">
-              <span>Computer Vision</span>
-              <span>Low-Resource LLMs</span>
-              <span>Quantum ML</span>
-              <span>HuggingFace</span>
-            </div>
-          </article>
-          <article class="skill-group">
-            <h3>Deployment</h3>
-            <div class="chip-list">
-              <span>Embedded Systems</span>
-              <span>Raspberry Pi</span>
-              <span>FPGA</span>
-              <span>Linux</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="lab-facilities" class="panel reveal">
-        <div class="panel-heading">
-          <p class="eyebrow">Lab Facilities</p>
-          <h2>Studying in DSU's AI & Robotics department with hands-on lab support.</h2>
-        </div>
-        <div class="panel-grid">
-          <p>
-            Dayananda Sagar University's AI & Robotics department maintains labs in robotics software, machine
-            learning, deep learning, kinematics, ROS, reinforcement learning, ADAS, GenAI, and robotic vision.
-          </p>
-          <p>
-            These facilities support coursework, mini-projects, and research-oriented learning.
-            <a href="https://www.dsu.edu.in/engineering/ai-robotics/lab-facilities-ai-robotics" target="_blank" rel="noreferrer">View the official lab facilities page</a>.
-          </p>
-        </div>
-      </section>
-
-      <section id="skills" class="section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Methods</p>
-          <h2>Technical tools grouped by area of use.</h2>
-        </div>
-        <div class="skill-groups">
-          <article class="skill-group">
-            <h3>Programming</h3>
-            <div class="chip-list">
-              <span>Python</span>
-              <span>C++</span>
-              <span>C</span>
-              <span>MATLAB</span>
-              <span>Bash/Linux</span>
-            </div>
-          </article>
-          <article class="skill-group">
-            <h3>Robotics & Embedded</h3>
-            <div class="chip-list">
-              <span>ROS 2</span>
-              <span>Nav2</span>
-              <span>tf2</span>
-              <span>Gazebo</span>
-              <span>SLAM Toolbox</span>
-              <span>Raspberry Pi</span>
-              <span>Arduino</span>
-              <span>FPGA</span>
-            </div>
-          </article>
-          <article class="skill-group">
-            <h3>AI, Cloud, and Tools</h3>
-            <div class="chip-list">
-              <span>PyTorch</span>
-              <span>TensorFlow</span>
-              <span>OpenCV</span>
-              <span>HuggingFace</span>
-              <span>Qiskit</span>
-              <span>PennyLane</span>
-              <span>AWS</span>
-              <span>Docker</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="cta reveal">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Open to research, robotics, and AI/ML opportunities.</h2>
-        </div>
+      <section id="contact" class="section contact">
+        <p class="eyebrow">Contact</p>
+        <p>Open to research, robotics, and AI/ML opportunities.</p>
         <div class="contact-links">
-          <a class="button button-secondary" href="./ramcharan_resume_updated.pdf" target="_blank" rel="noreferrer">Download CV</a>
           <a class="button button-primary" href="mailto:ramcharanathyam2006@gmail.com">Email</a>
+          <a class="button button-secondary" href="./ramcharan_resume_updated.pdf" target="_blank" rel="noreferrer">Download CV</a>
           <a class="button button-secondary" href="https://github.com/ramcharan377" target="_blank" rel="noreferrer">GitHub</a>
           <a class="button button-secondary" href="https://linkedin.com/in/athyam-ramcharan" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
@@ -247,9 +100,6 @@
 
     <footer class="footer">
       <p>Academic profile for Athyam Ramcharan.</p>
-      <p>Built from the current resume and tuned for research and robotics roles.</p>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>
