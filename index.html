@@ -1,105 +1,486 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Academic profile and CV for Athyam Ramcharan, an AI and Robotics Engineering student focused on research."
+      content="Athyam Ramcharan — AI & Robotics Engineering student at Dayananda Sagar University, Bangalore. Portfolio showcasing projects in ROS 2, autonomous systems, machine learning, and computer vision."
     />
-    <title>Athyam Ramcharan | Academic Profile</title>
+    <meta name="author" content="Athyam Ramcharan" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Athyam Ramcharan | Student Portfolio" />
+    <meta property="og:description" content="AI & Robotics Engineering student building autonomous systems, ML pipelines, and embedded solutions." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ramcharan377.github.io" />
+
+    <title>Athyam Ramcharan | Student Portfolio</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="topbar">
-      <a class="brand" href="#home">Athyam Ramcharan</a>
-      <nav class="nav">
-        <a href="#overview">Overview</a>
-        <a href="#education">Education</a>
-        <a href="#research">Research</a>
-        <a href="./ramcharan_resume_updated.pdf" target="_blank" rel="noreferrer">CV</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    <!-- Animated Background -->
+    <div class="bg-orbs" aria-hidden="true">
+      <div class="orb orb--1"></div>
+      <div class="orb orb--2"></div>
+      <div class="orb orb--3"></div>
+      <div class="orb orb--4"></div>
+    </div>
+    <div class="noise-overlay" aria-hidden="true"></div>
 
-    <main id="home" class="shell">
-      <section class="hero">
-        <p class="eyebrow">Academic Profile</p>
-        <h1>AI and robotics student focused on research and autonomous systems.</h1>
-        <p class="lede">
-          Athyam Ramcharan is an AI and Robotics Engineering student in Bangalore. His work focuses on ROS 2,
-          autonomous systems, sensor fusion, computer vision, and low-resource machine learning.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="./ramcharan_resume_updated.pdf" target="_blank" rel="noreferrer">View CV</a>
-          <a class="button button-secondary" href="#contact">Contact</a>
+    <!-- ─── Navigation ─── -->
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <a class="nav-brand" href="#hero">AR.</a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </div>
-      </section>
+      </div>
+    </nav>
 
-      <section id="overview" class="section">
-        <p class="eyebrow">Overview</p>
-        <p>
-          My work centers on ROS 2-based autonomous systems, combining SLAM, sensor fusion, planning, and embedded
-          deployment. Recent work includes a multi-node autonomous drone stack, real-time pose estimation, and
-          hardware bring-up on Raspberry Pi and FPGA. DSU's AI & Robotics labs support this work across robotics,
-          machine learning, GenAI, ADAS, and robotic vision.
-        </p>
-      </section>
-
-      <section id="education" class="section">
-        <p class="eyebrow">Education</p>
-        <div class="items">
-          <div class="item">
-            <span class="item-meta">2024 - Present</span>
-            <h2>B.Tech. in Artificial Intelligence and Robotics Engineering</h2>
-            <p>Dayananda Sagar University, Bangalore, India</p>
+    <!-- ─── Hero Section ─── -->
+    <section class="hero section" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <p class="hero-greeting reveal">
+              <span class="wave">👋</span> Hey there, I'm
+            </p>
+            <h1 class="hero-name reveal reveal-delay-1">
+              Athyam<br /><span class="gradient-text">Ramcharan</span>
+            </h1>
+            <p class="hero-role reveal reveal-delay-2">
+              <span id="typed-text"></span><span class="typed-cursor"></span>
+            </p>
+            <p class="hero-description reveal reveal-delay-3">
+              An AI & Robotics Engineering student passionate about building autonomous systems,
+              machine learning pipelines, and embedded solutions. Currently studying at
+              Dayananda Sagar University, Bangalore.
+            </p>
+            <div class="hero-buttons reveal reveal-delay-4">
+              <a class="btn btn-primary" href="./ramcharan_resume_updated.pdf" target="_blank" rel="noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
+                Download CV
+              </a>
+              <a class="btn btn-outline" href="https://github.com/ramcharan377" target="_blank" rel="noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
           </div>
-          <div class="item">
-            <span class="item-meta">2021 - 2024</span>
-            <h2>Diploma in Mechanical Engineering</h2>
-            <p>Sir M Visvesvaraya Polytechnic, Hospet, India</p>
+
+          <div class="hero-stats">
+            <div class="stat-card reveal reveal-delay-2">
+              <div class="stat-card-icon violet">🤖</div>
+              <h3>Robotics & Autonomy</h3>
+              <p>ROS 2, SLAM, Nav2, sensor fusion, autonomous drone systems</p>
+            </div>
+            <div class="stat-card reveal reveal-delay-3">
+              <div class="stat-card-icon teal">🧠</div>
+              <h3>Machine Learning & AI</h3>
+              <p>Deep learning, computer vision, NLP, quantum-enhanced ML</p>
+            </div>
+            <div class="stat-card reveal reveal-delay-4">
+              <div class="stat-card-icon pink">⚙️</div>
+              <h3>Embedded Systems</h3>
+              <p>Raspberry Pi, FPGA, hardware bring-up, real-time systems</p>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="research" class="section">
-        <p class="eyebrow">Research</p>
-        <div class="items">
-          <div class="item">
-            <h2>Autonomous agricultural drone</h2>
-            <p>ROS 2, SLAM Toolbox, Nav2, sensor fusion, and custom communication for autonomous control in Gazebo.</p>
+    <!-- ─── About Section ─── -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0" /></svg>
+            About Me
+          </span>
+          <h2 class="section-title">Research-oriented student in<br />robotics & machine learning</h2>
+          <p class="section-subtitle">Building at the intersection of hardware and intelligence.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="reveal">
+              I'm an AI & Robotics Engineering student at Dayananda Sagar University, Bangalore.
+              My work centers on ROS 2-based autonomous systems, combining SLAM, sensor fusion,
+              motion planning, and embedded deployment to build robots that perceive, reason, and act.
+            </p>
+            <p class="reveal reveal-delay-1">
+              Beyond robotics, I explore machine learning and computer vision — from low-resource
+              LLMs for Indian languages to quantum-enhanced ML experiments for disease detection.
+              I'm driven by the challenge of making intelligent systems work in real-world,
+              resource-constrained environments.
+            </p>
           </div>
-          <div class="item">
-            <h2>Quantum-enhanced ML</h2>
-            <p>Hybrid quantum-classical pipeline for disease detection using Qiskit, PennyLane, and Scikit-learn.</p>
-          </div>
-          <div class="item">
-            <h2>Low-resource LLMs</h2>
-            <p>Fine-tuning workflows for Indian languages using HuggingFace, LoRA, adapters, and custom tokenization.</p>
+
+          <div class="about-info">
+            <div class="info-item reveal">
+              <div class="label">Name</div>
+              <div class="value">Athyam Ramcharan</div>
+            </div>
+            <div class="info-item reveal reveal-delay-1">
+              <div class="label">University</div>
+              <div class="value">DSU, Bangalore</div>
+            </div>
+            <div class="info-item reveal reveal-delay-2">
+              <div class="label">Degree</div>
+              <div class="value">B.Tech AI & Robotics</div>
+            </div>
+            <div class="info-item reveal reveal-delay-3">
+              <div class="label">Email</div>
+              <div class="value">ramcharanathyam2006@gmail.com</div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="contact" class="section contact">
-        <p class="eyebrow">Contact</p>
-        <p>Open to research, robotics, and AI/ML opportunities.</p>
-        <div class="contact-links">
-          <a class="button button-primary" href="mailto:ramcharanathyam2006@gmail.com">Email</a>
-          <a class="button button-secondary" href="./ramcharan_resume_updated.pdf" target="_blank" rel="noreferrer">Download CV</a>
-          <a class="button button-secondary" href="https://github.com/ramcharan377" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="button button-secondary" href="https://linkedin.com/in/athyam-ramcharan" target="_blank" rel="noreferrer">LinkedIn</a>
+    <!-- ─── Skills Section ─── -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.049.58.025 1.193-.14 1.743" /></svg>
+            Skills
+          </span>
+          <h2 class="section-title">Technologies & tools I work with</h2>
+          <p class="section-subtitle">A mix of robotics, AI, programming, and development tools.</p>
         </div>
-      </section>
-    </main>
 
+        <div class="skills-grid stagger-children">
+          <div class="skill-category reveal" style="--i:0">
+            <div class="skill-category-header">
+              <div class="skill-category-icon" style="background: rgba(108,99,255,0.15); color: var(--accent-1);">🤖</div>
+              <h3>Robotics & Autonomy</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">ROS 2</span>
+              <span class="skill-tag">SLAM Toolbox</span>
+              <span class="skill-tag">Nav2</span>
+              <span class="skill-tag">Gazebo</span>
+              <span class="skill-tag">Sensor Fusion</span>
+              <span class="skill-tag">URDF / Xacro</span>
+              <span class="skill-tag">MoveIt</span>
+              <span class="skill-tag">PX4</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" style="--i:1">
+            <div class="skill-category-header">
+              <div class="skill-category-icon" style="background: rgba(0,212,170,0.15); color: var(--accent-2);">🧠</div>
+              <h3>Machine Learning & AI</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">Scikit-learn</span>
+              <span class="skill-tag">HuggingFace</span>
+              <span class="skill-tag">OpenCV</span>
+              <span class="skill-tag">LoRA</span>
+              <span class="skill-tag">Qiskit</span>
+              <span class="skill-tag">PennyLane</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" style="--i:2">
+            <div class="skill-category-header">
+              <div class="skill-category-icon" style="background: rgba(255,107,157,0.15); color: var(--accent-3);">💻</div>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">C / C++</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Bash</span>
+              <span class="skill-tag">MATLAB</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" style="--i:3">
+            <div class="skill-category-header">
+              <div class="skill-category-icon" style="background: rgba(255,193,68,0.15); color: #ffc144;">🛠️</div>
+              <h3>Tools & Platforms</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Git / GitHub</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Raspberry Pi</span>
+              <span class="skill-tag">FPGA</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Jupyter</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Education Section ─── -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
+            Education
+          </span>
+          <h2 class="section-title">Academic background</h2>
+          <p class="section-subtitle">Formal training in AI, robotics, and mechanical engineering.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">2024 — Present</span>
+              <h3>B.Tech in Artificial Intelligence & Robotics Engineering</h3>
+              <p>Dayananda Sagar University, Bangalore, India</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal reveal-delay-2">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">2021 — 2024</span>
+              <h3>Diploma in Mechanical Engineering</h3>
+              <p>Sir M Visvesvaraya Polytechnic, Hospet, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Projects Section ─── -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" /></svg>
+            Projects
+          </span>
+          <h2 class="section-title">Things I've built</h2>
+          <p class="section-subtitle">Academic projects and experiments across robotics, ML, and systems.</p>
+        </div>
+
+        <div class="projects-grid stagger-children">
+          <!-- Project 1 -->
+          <div class="project-card reveal" style="--i:0">
+            <div class="project-card-header">
+              <div class="project-icon" style="background: rgba(108,99,255,0.15); color: var(--accent-1);">🛩️</div>
+              <a class="project-link" href="https://github.com/ramcharan377" target="_blank" rel="noreferrer" aria-label="View on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+              </a>
+            </div>
+            <h3>Autonomous Agricultural Drone</h3>
+            <p>Multi-node ROS 2 autonomous drone stack with SLAM Toolbox, Nav2, sensor fusion, and custom communication for autonomous control in Gazebo simulation.</p>
+            <div class="project-tags">
+              <span class="project-tag">ROS 2</span>
+              <span class="project-tag">SLAM</span>
+              <span class="project-tag">Nav2</span>
+              <span class="project-tag">Gazebo</span>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card reveal" style="--i:1">
+            <div class="project-card-header">
+              <div class="project-icon" style="background: rgba(0,212,170,0.15); color: var(--accent-2);">⚛️</div>
+              <a class="project-link" href="https://github.com/ramcharan377" target="_blank" rel="noreferrer" aria-label="View on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+              </a>
+            </div>
+            <h3>Quantum-Enhanced ML</h3>
+            <p>Hybrid quantum-classical machine learning pipeline for disease detection, leveraging Qiskit and PennyLane with classical Scikit-learn models.</p>
+            <div class="project-tags">
+              <span class="project-tag">Qiskit</span>
+              <span class="project-tag">PennyLane</span>
+              <span class="project-tag">Scikit-learn</span>
+              <span class="project-tag">Python</span>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card reveal" style="--i:2">
+            <div class="project-card-header">
+              <div class="project-icon" style="background: rgba(255,107,157,0.15); color: var(--accent-3);">🗣️</div>
+              <a class="project-link" href="https://github.com/ramcharan377" target="_blank" rel="noreferrer" aria-label="View on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+              </a>
+            </div>
+            <h3>Low-Resource LLMs for Indian Languages</h3>
+            <p>Fine-tuning workflows for Indian languages using HuggingFace Transformers, LoRA adapters, and custom tokenization strategies for low-resource settings.</p>
+            <div class="project-tags">
+              <span class="project-tag">HuggingFace</span>
+              <span class="project-tag">LoRA</span>
+              <span class="project-tag">NLP</span>
+              <span class="project-tag">Transformers</span>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card reveal" style="--i:3">
+            <div class="project-card-header">
+              <div class="project-icon" style="background: rgba(255,193,68,0.15); color: #ffc144;">📝</div>
+              <a class="project-link" href="https://github.com/ramcharan377/transformer-text-generation-lab" target="_blank" rel="noreferrer" aria-label="View on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+              </a>
+            </div>
+            <h3>Transformer Text Generation Lab</h3>
+            <p>Hands-on lab exploring transformer architectures for text generation, including attention mechanisms, positional encoding, and decoding strategies.</p>
+            <div class="project-tags">
+              <span class="project-tag">Transformers</span>
+              <span class="project-tag">PyTorch</span>
+              <span class="project-tag">NLP</span>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card reveal" style="--i:4">
+            <div class="project-card-header">
+              <div class="project-icon" style="background: rgba(0,188,212,0.15); color: #4dd0e1;">🎮</div>
+              <a class="project-link" href="https://github.com/ramcharan377/reinforcement-learning-agent" target="_blank" rel="noreferrer" aria-label="View on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+              </a>
+            </div>
+            <h3>Reinforcement Learning Agent</h3>
+            <p>RL agent training with Q-learning and policy gradient methods for game environments, exploring reward shaping and exploration strategies.</p>
+            <div class="project-tags">
+              <span class="project-tag">RL</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">OpenAI Gym</span>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="project-card reveal" style="--i:5">
+            <div class="project-card-header">
+              <div class="project-icon" style="background: rgba(156,39,176,0.15); color: #ba68c8;">🕹️</div>
+              <a class="project-link" href="https://github.com/ramcharan377/GamePlayAgents" target="_blank" rel="noreferrer" aria-label="View on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+              </a>
+            </div>
+            <h3>GamePlay Agents</h3>
+            <p>AI agents trained to play games using various ML approaches, demonstrating decision-making, strategy optimization, and adaptive behavior.</p>
+            <div class="project-tags">
+              <span class="project-tag">AI Agents</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Game AI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Contact Section ─── -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+            Contact
+          </span>
+          <h2 class="section-title">Let's connect</h2>
+          <p class="section-subtitle">Open to research collaborations, robotics projects, and AI/ML opportunities.</p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-text">
+            <p class="reveal">
+              I'm always interested in connecting with fellow researchers, students, and professionals
+              working in robotics, machine learning, and AI. Whether it's a collaboration, an opportunity,
+              or just a conversation — feel free to reach out.
+            </p>
+          </div>
+
+          <div class="contact-links">
+            <a class="contact-card reveal" href="mailto:ramcharanathyam2006@gmail.com" id="contact-email">
+              <div class="contact-card-icon" style="background: rgba(108,99,255,0.15); color: var(--accent-1);">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+              </div>
+              <div class="contact-card-info">
+                <h3>Email</h3>
+                <p>ramcharanathyam2006@gmail.com</p>
+              </div>
+            </a>
+
+            <a class="contact-card reveal reveal-delay-1" href="https://github.com/ramcharan377" target="_blank" rel="noreferrer" id="contact-github">
+              <div class="contact-card-icon" style="background: rgba(0,212,170,0.15); color: var(--accent-2);">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div class="contact-card-info">
+                <h3>GitHub</h3>
+                <p>github.com/ramcharan377</p>
+              </div>
+            </a>
+
+            <a class="contact-card reveal reveal-delay-2" href="https://linkedin.com/in/athyam-ramcharan" target="_blank" rel="noreferrer" id="contact-linkedin">
+              <div class="contact-card-icon" style="background: rgba(255,107,157,0.15); color: var(--accent-3);">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div class="contact-card-info">
+                <h3>LinkedIn</h3>
+                <p>Athyam Ramcharan</p>
+              </div>
+            </a>
+
+            <a class="contact-card reveal reveal-delay-3" href="./ramcharan_resume_updated.pdf" target="_blank" rel="noreferrer" id="contact-cv">
+              <div class="contact-card-icon" style="background: rgba(255,193,68,0.15); color: #ffc144;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" /></svg>
+              </div>
+              <div class="contact-card-info">
+                <h3>Resume / CV</h3>
+                <p>Download my latest CV</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Footer ─── -->
     <footer class="footer">
-      <p>Academic profile for Athyam Ramcharan.</p>
+      <div class="container">
+        <p class="footer-text">
+          © 2024 <span class="gradient-text">Athyam Ramcharan</span>. Built with care.
+        </p>
+        <div class="footer-links">
+          <a href="https://github.com/ramcharan377" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/athyam-ramcharan" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:ramcharanathyam2006@gmail.com" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+          </a>
+        </div>
+      </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
