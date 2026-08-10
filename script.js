@@ -1,24 +1,9 @@
 /* ============================================================
    ATHYAM RAMCHARAN — PORTFOLIO JAVASCRIPT
-   Clean interactions, tab filters, theme toggle, and lightbox.
+   Clean interactions, tab filters, and lightbox.
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // ─── Theme Toggling ───
-  const themeToggle = document.getElementById('theme-toggle');
-  const currentTheme = localStorage.getItem('theme') || 'light';
-
-  // Apply initial theme
-  document.documentElement.setAttribute('data-theme', currentTheme);
-
-  themeToggle.addEventListener('click', () => {
-    const activeTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
-    
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-  });
-
   // ─── Mobile Navigation Toggle ───
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
@@ -60,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // Run once initially to highlight active section
 
   // ─── Tab Switcher (Experiments) ───
   const tabButtons = document.querySelectorAll('.tab-btn');
