@@ -283,6 +283,51 @@ Output: "...in a remote, previously unexplored valley, in the Andes Mountains. E
 
       <hr />
 
+      <!-- Blog -->
+      <section class="section" id="blog">
+        <h2>Blog</h2>
+
+        <article class="blog-post">
+          <div class="blog-post-header">
+            <h3 class="blog-post-title">Notes on World Models: Why I Think They Matter</h3>
+            <span class="blog-post-date">August 2026</span>
+          </div>
+
+          <p class="blog-post-body">
+            I have been spending a lot of time lately thinking about <em>world models</em> — the idea that an intelligent agent should not just map observations to actions, but instead maintain a compressed, predictive internal representation of how the world works. The distinction sounds philosophical but it has very concrete engineering consequences.
+          </p>
+
+          <p class="blog-post-body">
+            Standard model-free reinforcement learning, which I have been implementing across Gymnasium environments, essentially treats the environment as a black box. The agent accumulates reward signals and gradually shapes its policy, but it never builds an explicit picture of what will happen next. This works well in narrow, stationary settings — FrozenLake, Taxi, even Atari Breakout — but it breaks down the moment the environment is non-stationary, sample-scarce, or requires longer-horizon planning.
+          </p>
+
+          <p class="blog-post-body">
+            World models try to fix this by learning a latent dynamics model: given the current state embedding <em>z<sub>t</sub></em> and action <em>a<sub>t</sub></em>, predict the next latent state <em>z&#x0302;<sub>t+1</sub></em> and the expected reward. The policy can then be trained entirely inside the imagination of this learned model — rolling out thousands of synthetic trajectories without ever touching the real environment. Dreamer (Hafner et al.) demonstrated this cleanly on continuous control tasks; the agent essentially learns to dream before it acts.
+          </p>
+
+          <p class="blog-post-body">
+            What fascinates me most is the connection to robotics. A robot navigating a cluttered lab cannot afford to sample every corner of configuration space. If it carries a compact world model — perhaps learned from a mix of simulation and sparse real-world interaction — it can reason about unseen obstacle configurations before committing to a motion plan. This connects directly to work I am doing on geometric knowledge distillation: the latent manifold a student network preserves is, in a sense, a small world model of the teacher's understanding of the task.
+          </p>
+
+          <p class="blog-post-body">
+            My current thinking is focused on three open problems. First, how do you keep the latent dynamics model accurate under distribution shift — especially when the robot encounters objects it was never trained on? Second, how do you scale world model planning to high-dimensional sensory inputs like raw RGB video without losing the geometric structure that matters for control? Third, and most ambitiously, can a single world model support multiple downstream tasks simultaneously, acting as a kind of reusable environmental prior?
+          </p>
+
+          <p class="blog-post-body">
+            These are not solved problems, and I do not have full answers yet. But I am actively reading, running experiments, and forming hypotheses. More notes to follow as the work develops.
+          </p>
+
+          <p class="blog-post-tags">
+            <span class="blog-tag">World Models</span>
+            <span class="blog-tag">Model-Based RL</span>
+            <span class="blog-tag">Latent Dynamics</span>
+            <span class="blog-tag">Robotics</span>
+          </p>
+        </article>
+      </section>
+
+      <hr />
+
       <!-- Footer / Info -->
       <footer class="page-footer-info">
         <p>&copy; 2026 Athyam Ramcharan. Minimal academic homepage. Built using raw HTML/CSS.</p>

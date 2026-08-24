@@ -409,6 +409,54 @@ hr {
   line-height: 1;
 }
 
+/* ─── Blog ─── */
+.blog-post {
+  margin-bottom: 32px;
+}
+
+.blog-post-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.blog-post-title {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.blog-post-date {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.blog-post-body {
+  font-size: 0.97rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.blog-post-tags {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.blog-tag {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 2px 8px;
+}
+
 /* ─── Footer ─── */
 .page-footer-info {
   margin-top: 40px;
